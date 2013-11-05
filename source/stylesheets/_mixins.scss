@@ -1,0 +1,76 @@
+@import '_variables';
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media #{$mobile} { @content; }
+  }
+  @else if $media == desktop {
+    @media #{$desktop} { @content; }
+  }
+  @else if $media == wide_desktop {
+    @media #{$wide_desktop} { @content; }
+  }
+  @else if $media == hi_res {
+    @media #{$hi_res} { @content; }
+  }
+}
+
+@mixin background-image-with-retina($img, $filetype, $size) {
+  background-image: image-url( $img + '.' + $filetype ) 0 0 no-repeat;
+  @include background-size($size);
+
+  @include respond-to(hi_res) {
+    background-image: image-url($img + '@2x' + '.' + $filetype);
+  }
+}
+
+@mixin svg-with-png-fallback($filepath, $size) {
+  background: image-url($filepath + '.png') 0 0 no-repeat;
+  @include background-size($size);
+
+  .svg & {
+    background-image: image-url($filepath + '.svg');
+  }
+}
+
+@mixin hover {
+  .no-touch &:hover,
+  .no-touch &:focus {
+    @content;
+  }
+}
+
+@mixin active {
+  .no-touch &:active {
+    @content;
+  }
+}
+
+
+@mixin cf {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin no-mobile {
+  display: block;
+
+  @include respond-to(mobile) {
+    display: none;
+  }
+}
+
+@mixin mobile {
+  display: none;
+
+  @include respond-to(mobile) {
+    display: block;
+  }
+}
