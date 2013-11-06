@@ -1,0 +1,31 @@
+.modal {
+  @include background-clip(padding-box);
+  @include box-shadow($box-shadow-large);
+
+  .modal--content {
+    @include border-radius($border-radius);
+    background: $greyLight;
+    padding: 35px 38px;
+  }
+}
+
+.modal-w-header {
+  @extend .modal;
+
+  .modal--header {
+    background: $white;
+    border-bottom: 1px solid $grey;
+    @include border-radius($border-radius $border-radius 0 0);
+    padding: 22px 38px;
+    text-align: center;
+  }
+
+  h1 {
+    color: $custom-header;
+    margin: 0;
+  }
+
+  .modal--content {
+    @include border-radius(0 0 $border-radius $border-radius);
+  }
+}

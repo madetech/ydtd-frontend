@@ -21,7 +21,6 @@
   </head>
 
   <body class="<%= page_classes %>" itemscope itemtype="http://schema.org/<%= current_page.data.schema || 'WebPage' %>">
-    <%= partial "nav", :locals => {:active => current_page.data.active} %>
     <%= yield %>
   </body>
 </html>

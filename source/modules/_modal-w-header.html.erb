@@ -1,0 +1,8 @@
+<section id="<%= locals[:id] %>" class="modal-w-header">
+    <header class="modal--header">
+      <h1 class="large"><%= locals[:title] %></h1>
+    </header>
+    <div class="modal--content">
+      <%= locals[:content].html_safe %>
+    </div>
+</section>
