@@ -1,5 +1,4 @@
 .modal {
-  @include background-clip(padding-box);
   @include box-shadow($box-shadow-large);
 
   .modal--content {

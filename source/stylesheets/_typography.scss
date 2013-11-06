@@ -73,11 +73,21 @@ p {
 
 a {
   color: grey;
-  text-decoration: none;
   outline: 0;
   line-height: inherit;
+  text-decoration: none;
+
   &:hover {
     color: grey;
+  }
+
+  &.light {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
