@@ -16,9 +16,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-  @include font-size($xxxlarge);
-  &.large {
-    @include font-size($large);
+  @include font-size($xxlarge);
+  &.larger {
+    @include font-size($xlarge);
   }
   &.xlarge {
     @include font-size($reallybig);
@@ -73,11 +73,21 @@ p {
 
 a {
   color: grey;
-  text-decoration: none;
   outline: 0;
   line-height: inherit;
+  text-decoration: none;
+
   &:hover {
     color: grey;
+  }
+
+  &.light {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 

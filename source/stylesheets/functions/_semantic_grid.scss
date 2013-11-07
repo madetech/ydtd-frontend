@@ -1,5 +1,3 @@
-
-
 // Gumby Semantic Grid Mixin //
 
 
@@ -71,64 +69,6 @@
     }
   }
 }
-
-@mixin hybrid($columns:$columns, $alignment: false, $behavior: false) {
-  @include column($columns, $alignment, $behavior, true);
-}
-
-@mixin push($columns, $hybrid-grid: false) {
-  @if $hybrid-grid == hybrid {
-    margin-left: push_x($columns, false, true);
-    &:first-child {
-      margin-left: push_x($columns, true, true);
-    }
-    @include respond(all-phones) {
-      margin-left: 0;
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-  }
-  @else {
-    margin-left: push_x($columns);
-    &:first-child {
-      margin-left: push_x($columns, true);
-    }
-    @include respond(all-phones) {
-      margin-left: 0;
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-  }
-}
-
-@mixin pull($direction: false, $columns: 0, $width: 0, $hybrid-grid: false) {
-  @if $direction == left {
-    @extend %pull-left;
-    @if ($columns > 0 and $width > 0) {
-      @if ($hybrid-grid == hybrid) {
-        margin-left: pull_x($columns, $width, true);
-        &:first-child {
-          margin-left: 0;
-        }
-      }
-      @else {
-        margin-left: pull_x($columns, $width);
-        &:first-child {
-          margin-left: 0;
-        }
-      }
-    }
-  }
-  @elseif $direction == none {
-    @extend %pull-none;
-  }
-  @else {
-    @extend %pull-right;
-  }
-}
-
 
 // Placeholders for the Semantic Grid
 

@@ -1,0 +1,24 @@
+.footer--minimal {
+  color: $white;
+  border-top: 2px solid $white;
+  font-family: $font-family;
+  font-weight: $body-font-weight;
+  min-width: $row-max-width;
+  padding: 70px 5%;
+  text-align: center;
+
+
+  @include respond(tablets) {min-width: 0;}
+  @include respond(all-phones) {
+    min-width: 0;
+    padding: 30px 5%;
+  }
+
+  .copyright {
+    @include font-size($small);
+
+    a {
+      color: $grey;
+    }
+  }
+}

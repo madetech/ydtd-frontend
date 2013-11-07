@@ -1,0 +1,11 @@
+button {
+  @include background(linear-gradiant(desaturate($custom-primary, 20%), darken($custom-primary, 20%)), $custom-primary);
+  @include border-radius($border-radius);
+  font-weight: $button-font-weight;
+  @include inline-block;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}

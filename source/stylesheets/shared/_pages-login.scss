@@ -1,0 +1,37 @@
+.login-modal-container {
+  @include column(7, center);
+  padding: {
+    bottom: 60px;
+    top: 110px;
+  }
+  text-align: center;
+
+  p {
+    text-align: center;
+  }
+
+  @include respond(all-phones) {
+    padding: {
+      bottom: 30px;
+      top: 60px;
+    }
+
+    a {
+      @include font-size($xsmall)
+    }
+  }
+}
+
+.bohek {
+  background: $custom-primary image-url('background/bokeh.png') repeat-y;
+  @include background-size(100% auto);
+
+  @include respond(tablets) {
+    @include background-size(100% 100%);
+    min-height: 100%;
+  }
+
+  @include respond(all-phones) {
+    background-image: none;
+  }
+}

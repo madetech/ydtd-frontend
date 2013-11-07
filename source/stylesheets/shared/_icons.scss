@@ -1,0 +1,11 @@
+.icons {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -300%;
+
+  &.centered {
+    margin: 0 auto !important;
+  }
+}

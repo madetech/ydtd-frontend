@@ -1,0 +1,36 @@
+.logo {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -300%;
+
+  &.centered {
+    margin: 0 auto !important;
+  }
+}
+
+.ydtd-logo {
+  @extend .logo;
+  background: image-url('logo/dark-your-day-thier-day.png') no-repeat 0 0;
+  @include background-size(197px 114px);
+  height: 114px;
+  width: 197px;
+
+  .svg & {
+    background-image: image-url('logo/dark-your-day-thier-day.svg');
+  }
+}
+
+.white-ydtd-logo {
+  @extend .ydtd-logo;
+  background-image: image-url('logo/white-your-day-thier-day.png');
+
+  .svg & {
+    background-image: image-url('logo/white-your-day-thier-day.svg');
+  }
+}
+
+.ydtd-logo-group {
+  margin-bottom: 34px;
+}
