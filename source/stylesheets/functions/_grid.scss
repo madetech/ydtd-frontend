@@ -21,35 +21,6 @@ $gutter: percentage($gutter-in-px / $row-max-width); // 2.1276596
   }
 }
 
-// Calculate Push Class Margins
-@function push_x($num, $first-child: false, $is-hybrid: false) {
-  @if $first-child and $is-hybrid {
-    @return (oneCol(true) * $num) + ($gutter * ($num - 1)) + $gutter; // Column width + gutter
-  }
-  @else if $first-child != true and $is_hybrid{
-    @return (oneCol(true) * $num) + ($gutter * ($num - 1)) + ($gutter * 2); // Column width + (gutter * 2)
-  }
-  @else if $first-child and $is_hybrid != true{
-      @return (oneCol() * $num) + ($gutter * ($num - 1)) + $gutter;
-  }
-  @else {
-    @return (oneCol() * $num) + ($gutter * ($num - 1)) + ($gutter * 2); // Column width + (gutter * 2)
-  }
-}
-
-// Calculate Pull Class Margins
-// note absence of first-child; first-child column containers should not be pulled
-// $num is number of columns to be pulled
-// $width is number of columns of container that is being pulled
-@function pull_x($num, $width, $is-hybrid: false) {
-    @if $is-hybrid {
-        @return -((oneCol(true) * $num) + ($gutter * ($num - 1)) + (oneCol(true) * $width) + ($gutter * ($width - 1)) + $gutter); // Pull width + column width + gutter
-    }
-    @else {
-        @return -((oneCol() * $num) + ($gutter * ($num - 1)) + (oneCol() * $width) + ($gutter * ($width - 1)) + $gutter); // Pull width + column width + gutter
-    }
-}
-
 // Calculate Centered Class Margins
 @function centered($num, $hybrid-grid: false) {
   @if $hybrid-grid{
