@@ -1,11 +1,111 @@
-button {
-  @include background(linear-gradiant(desaturate($custom-primary, 20%), darken($custom-primary, 20%)), $custom-primary);
-  @include border-radius($border-radius);
-  font-weight: $button-font-weight;
+button,
+.button {
+  background: adjust_hue(darken($custom-primary, 30%), 23);
+  border: 0;
+  @include border-radius($border-radius + $button-border);
+  @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.2));
+  color: #fff;
   @include inline-block;
+  font: {
+    family: $font-family;
+    weight: bold;
+  };
+  @include font-size($norm);
+  @include font-rendering-fix;
+  letter-spacing: -0.07em;
+  outline: none;
+  padding: $button-border;
+
+  span {
+    @include background-image(linear-gradient(lighten($custom-primary, 10%) 38%, darken($custom-primary, 10%)));
+    background-color: $custom-primary;
+    @include border-radius($border-radius);
+    @include box-shadow(inset 0 1px 2px rgba(255, 255, 255, 0.3));
+    @include inline-block;
+    padding: 0.5em 15px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &:hover,
+  &:focus {
+    @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.3));
+
+    span {
+      @include background-image(linear-gradient(lighten($custom-primary, 12%) 38%, lighten(darken($custom-primary, 10%), 2%)));
+    }
+  }
+
+  &:active {
+    background: darken(adjust_hue(darken($custom-primary, 30%), 23), 10%);
+    @include box-shadow(none);
+
+    span {
+      @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+      @include background(lighten(darken($custom-primary, 10%), 2%));
+    }
+  }
 
   &::-moz-focus-inner {
     border: 0;
     padding: 0;
   }
 }
+
+button.button-primary {
+  @extend .button;
+
+  span {
+    @include background-image(linear-gradient(lighten($custom-secondary, 10%) 38%, darken($custom-secondary, 10%)));
+    background-color: $custom-secondary;
+  }
+
+  &:hover,
+  &:focus {
+    @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.3));
+
+    span {
+      @include background-image(linear-gradient(lighten($custom-secondary, 12%) 38%, lighten(darken($custom-secondary, 10%), 2%)));
+    }
+  }
+
+  &:active {
+    span {
+      @include background(lighten(darken($custom-secondary, 10%), 2%));
+    }
+  }
+}
+
+button.button-secondary {
+  @extend .button;
+  background: adjust_hue(darken(#B3B3B3, 30%), 23);
+  color: $greyDarkest;
+
+  span {
+    @include background(linear-gradient(lighten(#B3B3B3, 10%) 38%, darken(#B3B3B3, 10%)));
+    background-color: #B3B3B3;
+  }
+
+  &:hover,
+  &:focus {
+    @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.3));
+
+    span {
+      @include background-image(linear-gradient(lighten(#B3B3B3, 12%) 38%, lighten(darken(#B3B3B3, 10%), 2%)));
+    }
+  }
+
+  &:active {
+    background: darken(adjust_hue(darken(#B3B3B3, 30%), 23), 10%);
+
+    span {
+      @include background(lighten(darken(#B3B3B3, 10%), 2%));
+    }
+  }
+}
+
+.button-search {
+  @extend .button-primary;
+  @include font-size($large, true);
+  width: 100%;
+}
+

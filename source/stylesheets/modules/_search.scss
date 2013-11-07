@@ -1,0 +1,27 @@
+.search-bar {
+  display: table;
+
+  .search-bar--input {
+    display: table-cell;
+    vertical-align: top;
+
+    input {
+      @include border-radius(($border-radius+2) 0 0 ($border-radius+2));
+      width: 100%;
+    }
+  }
+
+  .search-bar--submit {
+    display: table-cell;
+    vertical-align: top;
+
+    .button-search {
+      @include border-radius(0 ($border-radius+2) ($border-radius+2) 0);
+
+      span {
+        @include border-radius(0 $border-radius $border-radius 0);
+      }
+    }
+  }
+}
+
