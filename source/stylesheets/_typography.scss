@@ -18,7 +18,7 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
   @include font-size($xxlarge);
   &.larger {
-    @include font-size($larger);
+    @include font-size($xlarge);
   }
   &.xlarge {
     @include font-size($reallybig);

@@ -70,11 +70,6 @@
   }
 }
 
-@mixin hybrid($columns:$columns, $alignment: false, $behavior: false) {
-  @include column($columns, $alignment, $behavior, true);
-}
-
-
 // Placeholders for the Semantic Grid
 
 %container {

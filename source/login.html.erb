@@ -1,5 +1,5 @@
 ---
-title: Reset your password
+title: Login
 body_class: bohek
 html_class: full-height
 ---
@@ -11,11 +11,14 @@ html_class: full-height
       <%= partial "shared/logo-white" %>
     </div>
 
-    <%= partial "modules/modal-w-header", :locals => {
-      :id => "reset-password",
-      :title => "Reset your password",
+    <%= partial "modules/modal", :locals => {
+      :id => "login",
       :content => "words"
     } %>
+
+    <button>login</button>
+
+    <p><a href="/reset-password.html" class="light">Can't access your account?</a></p>
   </div>
 </div>
 

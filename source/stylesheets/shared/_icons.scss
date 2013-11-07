@@ -6,21 +6,6 @@
   text-indent: -300%;
 
   &.centered {
-    margin: 0 auto;
-  }
-}
-
-.white-line-icon {
-  @extend .icons;
-  background: image-url('icon/white-your-day-thier-day-line.png') no-repeat 0 0;
-  @include background-size(49px 21px);
-  content: '';
-  display: block;
-  height: 21px;
-  margin: 6px auto;
-  width: 49px;
-
-  .svg & {
-    background-image: image-url('icon/white-your-day-thier-day-line.png');
+    margin: 0 auto !important;
   }
 }

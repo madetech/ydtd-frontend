@@ -4,14 +4,21 @@
   font-family: $font-family;
   font-weight: $body-font-weight;
   min-width: $row-max-width;
-  padding: 70px 0;
+  padding: 70px 5%;
   text-align: center;
 
-  a {
-    color: $grey;
+
+  @include respond(tablets) {min-width: 0;}
+  @include respond(all-phones) {
+    min-width: 0;
+    padding: 30px 5%;
   }
 
-  small {
+  .copyright {
     @include font-size($small);
+
+    a {
+      color: $grey;
+    }
   }
 }
