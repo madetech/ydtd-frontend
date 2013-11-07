@@ -5,14 +5,37 @@ title: Form inputs
 <form>
   <fieldset>
     <legend>Radio Buttons:</legend>
-    <input type="radio" name="ydtd-radio" value="selected" />
-    <input type="radio" name="ydtd-radio" value="clear" />
-    <input type="radio" name="ydtd-radio" value="error" class="error" />
+    <div class="radio-wrap">
+      <input type="radio" id="radio1" name="ydtd-radio" value="selected" />
+      <label for="radio1"></label>
+    </div>
+
+    <div class="radio-wrap">
+      <input type="radio" id="radio2" name="ydtd-radio" value="clear" />
+      <label for="radio2"></label>
+    </div>
+
+    <div class="radio-wrap">
+      <input type="radio" id="radio3" name="ydtd-radio" value="error" class="error" />
+      <label for="radio3"></label>
+    </div>
 
     <legend>Checkboxes:</legend>
-    <input type="checkbox" name="ydtd-checkbox" value="selected" />
-    <input type="checkbox" name="ydtd-checkbox" value="clear" />
-    <input type="checkbox" name="ydtd-checkbox" value="error" class="error" />
+
+    <div class="checkbox-wrap">
+      <input type="checkbox" id="checkbox1" name="ydtd-checkbox" value="selected" />
+      <label for="checkbox1"></label>
+    </div>
+
+    <div class="checkbox-wrap">
+      <input type="checkbox" id="checkbox2" name="ydtd-checkbox" value="clear" />
+      <label for="checkbox2"></label>
+    </div>
+
+    <div class="checkbox-wrap">
+      <input type="checkbox" id="checkbox3" name="ydtd-checkbox" value="error" class="error" />
+      <label for="checkbox3"></label>
+    </div>
 
     <legend>Text Inputs:</legend>
     <label for="first-name">First Name:</label>
