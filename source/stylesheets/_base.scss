@@ -1,6 +1,6 @@
 body {
   background: $custom-primary;
-  -moz-osx-font-smoothing: grayscale;
+  @include font-rendering-fix;
 }
 
 body * {

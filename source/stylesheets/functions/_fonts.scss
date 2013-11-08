@@ -3,9 +3,13 @@
 
   @if $is-important {
     font-size: $size + px !important;
-    font-size: ($size / strip-units($base-font-size)) + rem !important;
   } @else {
     font-size: $size + px;
-    font-size: ($size / strip-units($base-font-size)) + rem;
   }
+}
+
+@mixin font-rendering-fix {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: $font-smoothing;
+  text-rendering: optimizeLegibility;
 }

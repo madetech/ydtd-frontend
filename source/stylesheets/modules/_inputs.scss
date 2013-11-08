@@ -1,5 +1,25 @@
+
+::-webkit-input-placeholder {
+  color: $greyDarkest;
+  font-family: inherit;
+}
+
+:-moz-placeholder {
+  color: $greyDarkest;
+  font-family: inherit;
+}
+
+::-moz-placeholder {
+  color: $greyDarkest;
+  font-family: inherit;
+}
+
+:-ms-input-placeholder {
+  color: $greyDarkest;
+  font-family: inherit;
+}
+
 form {
-  background-color: $greyLight;
   font: {
     family: $font-family;
     weight: $font-weight-light;
@@ -105,7 +125,7 @@ input {
 
   &[type=text] {
     @include border-radius(5px);
-    padding: 12px 16px 10px;
+    padding: 0.65em 16px 0.64em;
     width: 440px;
   }
 
