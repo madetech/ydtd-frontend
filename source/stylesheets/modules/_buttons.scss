@@ -72,6 +72,7 @@ button.button-secondary {
 .button-search {
   @extend .button-primary;
   @include font-size($large, true);
+  padding: 0.5em 15px;
   width: 100%;
 }
 

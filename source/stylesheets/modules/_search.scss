@@ -19,12 +19,7 @@
 
     .button-search {
       @include border-radius(0 ($border-radius+$button-border) ($border-radius+$button-border) 0);
-      padding: $button-border / 2;
-
-      span {
-        @include border-radius(0 $border-radius $border-radius 0);
-        padding: 0.55em 15px;
-      }
+      padding: 0.51em 15px 0.52em;
     }
   }
 }
