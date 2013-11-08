@@ -1,11 +1,22 @@
-.icons {
-  display: block;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  text-indent: -300%;
+@include font-face("icomoon", font-files("icomoon.woff", "icomoon.ttf", "icomoon.svg#icomoon"), "icomoon.eot", normal, normal);
 
-  &.centered {
-    margin: 0 auto !important;
-  }
+[class*="icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+  content: "\e600";
+}
+.icon-search:before {
+  content: "\e601";
 }
