@@ -137,3 +137,46 @@ input {
 select {
   width: 300px;
 }
+
+.pagination-container {
+  background-color: $greyLight;
+  font: {
+    family: $font-family;
+    weight: $font-weight-semibold;
+  }
+  @include font-size($norm);
+  padding: 50px 0;
+  text-align: center;
+
+  span {
+    &.current {
+      background-color: $custom-header;
+      border-radius: $border-radius;
+      color: #fff;
+      @include inline-block;
+      padding: 2px 6px;
+    }
+
+    a {
+      border-radius: $border-radius;
+      color: #000;
+      @include inline-block;
+      padding: 2px 6px;
+
+      &:hover {
+        background-color: $custom-primary;
+        color: #fff;
+      }
+    }
+
+    &.first,
+    &.prev,
+    &.next,
+    &.last {
+      a {
+        font-weight: $font-weight-light;
+        padding-right: 8px;
+      }
+    }
+  }
+}
