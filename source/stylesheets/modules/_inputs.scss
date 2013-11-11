@@ -176,9 +176,18 @@ select {
 }
 
 button {
-  &.login {
+  &.submit {
     @include inline-block;
     float: right;
+  }
+}
+
+.form-link {
+  @include font-size($small);
+  font-weight: $font-weight-semibold;
+
+  &:hover {
+    color: $custom-header;
   }
 }
 
