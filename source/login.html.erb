@@ -13,10 +13,10 @@ html_class: full-height
 
     <%= partial "modules/modal", :locals => {
       :id => "login",
-      :content => "<button><span>Login</span></button><br><br><button class=\"button-primary\"><span>Login</span></button><br><br><button class=\"button-secondary\"><span>Login</span></button>"
+      :content => "<form><fieldset><label for='email'>YourEmail</label>
+    <input type='email' id='email' name='email' /><label for='password'>YourPassword</label><input type='password' id='password' name='password' /><div class='checkbox-wrap'><input type='checkbox' id='checkbox' name='ydtd-checkbox' value='selected' /><label for='checkbox'>Keep me logged in</label>
+    </div><button class='login'><span>Login</span></button></fieldset></form>"
     } %>
-
-
 
     <p><a href="/reset-password.html" class="light">Can't access your account?</a></p>
   </div>
