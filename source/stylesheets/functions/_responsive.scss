@@ -38,6 +38,9 @@
   @else if $media == print {
     @media print { @content; }
   }
+  @else if $media == hi_res {
+    @media #{$high-res} { @content; }
+  }
   @else {
     @media only screen and ('#{$media}') { @content; }
   }

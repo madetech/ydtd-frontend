@@ -1,5 +1,8 @@
+html {
+  background: $greyLight;
+}
+
 body {
-  background: $custom-primary;
   @include font-rendering-fix;
 }
 
