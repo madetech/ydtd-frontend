@@ -9,6 +9,7 @@
     input {
       @include border-radius(($border-radius+$button-border) 0 0 ($border-radius+$button-border));
       border-right: 0;
+      margin: 0;
       width: 100%;
     }
   }

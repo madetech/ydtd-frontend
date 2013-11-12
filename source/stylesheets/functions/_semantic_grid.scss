@@ -38,8 +38,11 @@
   @extend %clearfix;
 }
 
+@mixin flushColumn($columns: $columns) {
+  width: flush_columns($columns);
+}
 
-@mixin column($columns:$columns, $alignment: false, $behavior: false, $hybrid: false) {
+@mixin column($columns: $columns, $alignment: false, $behavior: false, $hybrid: false) {
   @extend %columnconfig;
   @if $alignment == center   {
     float: none;

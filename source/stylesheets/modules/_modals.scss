@@ -3,8 +3,12 @@
 
   .modal--content {
     @include border-radius($border-radius);
-    background: $greyLight;
+    background: $greyLightest;
     padding: 35px 38px;
+
+    @include respond(all-phones) {
+      padding: 22px 20px;
+    }
   }
 }
 
@@ -17,6 +21,10 @@
     @include border-radius($border-radius $border-radius 0 0);
     padding: 22px 38px;
     text-align: center;
+
+    @include respond(all-phones) {
+      padding: 12px 20px;
+    }
   }
 
   h1 {

@@ -1,0 +1,159 @@
+%header_bottom_padding {
+  padding-bottom: 28px;
+}
+
+.application--header {
+  background: $greyLighter;
+  border-bottom: 3px solid $custom-primary;
+
+  & > div {
+    @include row;
+  }
+
+  .application--header-logo {
+    @extend %header_bottom_padding;
+    background: $white;
+    border-top: 2px solid $custom-primary;
+    @include column(4);
+    display: table-cell;
+    float: left;
+    height: 118px;
+    padding: {
+      left: 25px;
+      right: 25px;
+      top: 28px;
+    };
+    text-align: left;
+    vertical-align: bottom;
+
+    img {
+      @include inline-block;
+      max-height: 62px;
+      max-width: 170px;
+    }
+  }
+}
+
+.application--header-mini-profile {
+  background: image-url('background/line-gradient.gif') repeat fixed;
+  border-left: 1px $grey solid;
+  border-right: 1px $grey solid;
+  @include column(4);
+  float: right;
+  font-family: $font-family;
+  font-weight: $font-weight-regular;
+  font-size: $norm;
+
+  @include respond(hi_res) {
+    @include background-size(3px 3px);
+  }
+
+  .user {
+    @include clearfix;
+    border-bottom: 1px $grey solid;
+    color: $greyMidnight;
+    height: 90px;
+    padding: 10px 17px 10px;
+  }
+
+  .user--information {
+    float: left;
+    padding-top: 10px;
+    width: 114px;
+
+    .profile {
+      color: $custom-primary;
+      display: block;
+      @include hyphenation;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .user--links {
+    font-family: $font-family;
+    font-weight: $font-weight-regular;
+    font-size: $xsmall;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 8px;
+
+    a {
+      color: $greyMidnight;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .user--avatar-wrap {
+    display: block;
+    float: right;
+    margin-left: 8px;
+    position: relative;
+
+    &:after {
+      background: $custom-primary;
+      @include border-radius(15px);
+      content: attr(data-notification);
+      color: #fff;
+      display: inline-block;
+      font-family: $font-family;
+      font-weight: $font-weight-bold;
+      font-size: $xsmall;
+      height: 15px;
+      line-height: 15px;
+      min-width: 15px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 2px;
+    }
+
+    &:hover:after  {
+      background: $custom-secondary;
+    }
+  }
+}
+
+.application--navigation {
+  @include flushColumn(8);
+  float: right;
+
+  ul {
+    @include clearfix;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    float: left;
+    padding: 0;
+    width: 20%;
+  }
+
+  a {
+    color: $greyMidnight;
+    display: block;
+    @extend %header_bottom_padding;
+    font-family: $font-family;
+    font-weight: $font-weight-medium;
+    margin-top: 40px;
+    text-align: center;
+
+    [class*="icon-"]:before {
+      color: $greyMidnight;
+      display: block;
+      height: $larger;
+      line-height: $larger;
+      font-size: $larger;
+      margin-bottom: 10px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

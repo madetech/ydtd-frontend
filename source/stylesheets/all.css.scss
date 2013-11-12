@@ -11,6 +11,7 @@
 @import "mixins";
 @import "base";
 @import "grid";
+@import "layout";
 @import "typography";
 @import "modules";
 
@@ -18,5 +19,6 @@
 @import "shared/icons";
 @import "shared/logos";
 @import "shared/pages-login";
+@import "shared/header";
 
-@import "vendor/select2";
+@import "select2";

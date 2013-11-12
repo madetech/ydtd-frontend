@@ -1,0 +1,22 @@
+.application--breadcrumb {
+  background: $greyLight;
+  border: {
+    bottom: 1px solid $greyDarker;
+  };
+
+  ul {
+    margin: 0;
+    @include row;
+  }
+
+  li {
+    float: left;
+    height: 46px;
+    line-height: 46px;
+    margin: 0;
+  }
+
+  a {
+    @include inline-block;
+  }
+}
