@@ -17,7 +17,7 @@ $gutter: percentage($gutter-in-px / $row-max-width); // 2.1276596
 }
 
 @function flush_columns($num){
-  @return (oneCol() * $num) + ($gutter * ($num - 1) + $gutter) ; // (One column * 'x') + (gutter * ('x' - 1)) = Column Width
+  @return ((oneCol() * $num) + ($gutter * $num) + $gutter); // (One column * 'x') + (gutter * ('x' - 1)) = Column Width
 }
 
 // Calculate Centered Class Margins
