@@ -22,6 +22,10 @@ end
 #
 # With no layout
 page "/", :layout => 'application'
+
+page "/tabbed_lists.html", :layout => 'application'
+page "/tabbed_lists_2.html", :layout => 'application'
+
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
