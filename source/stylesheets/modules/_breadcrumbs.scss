@@ -10,13 +10,21 @@
   }
 
   li {
+    color: $greyDarkest;
+    font-family: $font-family;
+    @include font-size($small);
     float: left;
-    height: 46px;
-    line-height: 46px;
-    margin: 0;
+    margin: 15px 2px 13px 0;
   }
 
   a {
+    border-bottom: 1px solid $greyDarkest;
+    color: #000;
+    font-weight: $font-weight-medium;
     @include inline-block;
+
+    &:hover {
+      color: $custom-secondary;
+    }
   }
 }
