@@ -2,8 +2,10 @@
 title: Charts
 body_class: bohek
 ---
+
 <div class="modal">
   <div class="modal--content">
+    <div id="chart_div"></div>
     <div class="chart-wrap" data-chart-type="pie">
       <script>
         var data = [
@@ -11,18 +13,21 @@ body_class: bohek
             value: 2368,
             color: custom_colours[0],
             title: "Unique Opens",
+            label: "Unique Opens",
             subtitle: " total opens to date",
             additional_data: "historic_total"
           }, {
             value: 1059,
             color: custom_colours[1],
             title: "Bounced",
+            label: "Bounced",
             subtitle: " couldn't be delivered",
             additional_data: "percentage"
           }, {
             value: 11419,
             color: custom_colours[2],
             title: "Not Opened",
+            label: "Not Opened",
             subtitle: "Open rates are only estimates",
             additional_data: false
           }
@@ -47,7 +52,8 @@ body_class: bohek
               pointColor : "rgba(220,220,220,1)",
               pointStrokeColor : "#fff",
               data : [65,59,90,81,56,55,40],
-              title : "Data One"
+              title : "Data One",
+              label : "Data One"
             },
             {
               fillColor : "rgba(151,187,205,0.5)",
@@ -55,7 +61,8 @@ body_class: bohek
               pointColor : "rgba(151,187,205,1)",
               pointStrokeColor : "#fff",
               data : [28,48,40,19,96,27,100],
-              title : "Data Two"
+              title : "Data Two",
+              label : "Data Two"
             }
           ]
         }

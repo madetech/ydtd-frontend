@@ -6,3 +6,4 @@
 //= require charts_line
 //= require charts_pie
 //= require charts_radar
+//= require lists
