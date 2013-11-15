@@ -47,8 +47,15 @@
     }
   }
 
+  #search-wrap {
+    text-align: right;
+    width: 100%;
+  }
+
   .search-bar {
+    float: right;
     @include inline-block(middle);
+    margin-top: 14px;
     width: auto;
   }
 }

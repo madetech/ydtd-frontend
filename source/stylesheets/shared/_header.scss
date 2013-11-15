@@ -14,7 +14,7 @@
     @extend %header_bottom_padding;
     background: $white;
     border-top: 2px solid $custom-primary;
-    @include column(4);
+    @include column(3);
     display: table-cell;
     float: left;
     height: 118px;
@@ -38,7 +38,7 @@
   background: image-url('background/line-gradient.gif') repeat fixed;
   border-left: 1px $grey solid;
   border-right: 1px $grey solid;
-  @include column(4);
+  @include column(3);
   float: right;
   font-family: $font-family;
   font-weight: $font-weight-regular;
