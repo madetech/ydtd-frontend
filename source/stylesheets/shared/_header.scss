@@ -246,6 +246,10 @@
         padding-top: 0;
       }
     }
+
+    &.active a [class*="icon-"]:before {
+      color: $greyMidnight;
+    }
   }
 
   a {
@@ -290,10 +294,13 @@
         margin: 0 10px 0 0;
         width: auto;
       }
-
       @include respond(all-phones) {
         display: none;
       }
+    }
+
+    &:hover [class*="icon-"]:before {
+      color: $custom-secondary;
     }
 
     &:before {
