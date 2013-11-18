@@ -87,10 +87,10 @@
       font-family: $font-family;
       @include font-size($xsmall);
       font-weight: $font-weight-regular;
-      text-decoration: underline;
 
-      &:hover {
-        text-decoration: none;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
       }
     }
   }
