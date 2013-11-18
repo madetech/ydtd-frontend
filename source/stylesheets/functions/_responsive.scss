@@ -45,3 +45,15 @@
     @media only screen and ('#{$media}') { @content; }
   }
 }
+
+.desktop-only {
+  @include respond(all-phones) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  @include respond(desktop) {
+    display: none;
+  }
+}

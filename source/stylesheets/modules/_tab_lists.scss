@@ -5,6 +5,7 @@
 }
 
 #table-tabs {
+
   a {
     background-color: $grey;
     border: {
@@ -45,6 +46,11 @@
       color: #000;
       margin-bottom: -1px;
     }
+
+    @include respond(all-phones) {
+      border-top: 1px solid #000;
+      width: 100%;
+    }
   }
 
   #search-wrap {
@@ -57,6 +63,13 @@
     @include inline-block(middle);
     margin-top: 14px;
     width: auto;
+
+    @include respond(all-phones) {
+      margin: {
+        bottom: 20px;
+        top: 0;
+      }
+    }
   }
 }
 
@@ -88,6 +101,14 @@
         font-family: 'icomoon';
         margin-left: 5px;
         @include rotate(180deg);
+      }
+
+      @include respond(all-phones) {
+        width: auto;
+
+        &:after {
+          display: none;
+        }
       }
     }
 
@@ -129,10 +150,20 @@
     &.sent {
       background-color: $custom-primary;
     }
+
+    @include respond(all-phones) {
+      display: block;
+      margin-left: 15px;
+      margin-bottom: 5px;
+    }
   }
 
   .time-ago {
     text-align: right;
     width: 200px;
+
+    @include respond(all-phones) {
+      width: auto;
+    }
   }
 }

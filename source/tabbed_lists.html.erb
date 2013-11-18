@@ -4,6 +4,7 @@ body_class: bohek
 ---
 <div id="tabbed-list-container" class="list-container">
   <div id="table-tabs">
+    <%= partial "modules/search_bar", :locals => {:placeholder => 'Search Lists?'} %>
     <a href="tabbed_lists.html" class="active">
       <span>Active</span>
       <span class="tab-figure">788</span>
@@ -20,13 +21,12 @@ body_class: bohek
       <span>Deleted</span>
       <span class="tab-figure">0</span>
     </a>
-    <%= partial "modules/search_bar", :locals => {:placeholder => 'Search Lists?'} %>
   </div>
 
   <div id="subscribers-container" data-pjax-container>
     <table>
       <tr class="table-headers">
-        <th>Email Address</th>
+        <th class="desktop-only">Email Address</th>
         <th>Name</th>
         <th class="subscribed-column">Subscribed</th>
         <th class="checkbox-column">
@@ -37,7 +37,7 @@ body_class: bohek
         </th>
       </tr>
       <tr>
-        <td>example@one.com</td>
+        <td class="desktop-only">example@one.com</td>
         <td>Joe Bloggs</td>
         <td>01/11/14</td>
         <td>
@@ -48,7 +48,7 @@ body_class: bohek
         </td>
       </tr>
       <tr>
-        <td>example@two.com</td>
+        <td class="desktop-only">example@two.com</td>
         <td>John Doe</td>
         <td>01/11/14</td>
         <td>
@@ -59,7 +59,7 @@ body_class: bohek
         </td>
       </tr>
       <tr>
-        <td>example@three.com</td>
+        <td class="desktop-only">example@three.com</td>
         <td>Jane Doe</td>
         <td>01/11/14</td>
         <td>
@@ -70,7 +70,7 @@ body_class: bohek
         </td>
       </tr>
       <tr>
-        <td>example@four.com</td>
+        <td class="desktop-only">example@four.com</td>
         <td>Keyser Soze</td>
         <td>01/11/14</td>
         <td>
