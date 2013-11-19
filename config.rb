@@ -17,8 +17,6 @@ activate :livereload
 activate :i18n
 
 set :source, "app"
-set :partials_dir, "app/views"
-set :layouts_dir, "app/views/layouts"
 set :css_dir, "assets/stylesheets"
 set :js_dir, "assets/javascripts"
 set :images_dir, "assets/images"
