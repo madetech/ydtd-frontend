@@ -1,0 +1,317 @@
+.application--header {
+  background: $greyLighter;
+  border-bottom: 3px solid $custom-primary;
+
+  & > div {
+    @include row;
+
+    @include respond(tablets) {
+      padding: 0;
+    }
+
+    @include respond(all-phones) {
+      padding: 0;
+      position: relative;
+    }
+  }
+
+  .application--header-logo {
+    background: $white;
+    border-top: 2px solid $custom-primary;
+    @include column(3);
+    display: table-cell;
+    float: left;
+    height: 118px;
+    padding: {
+      bottom: 28px;
+      left: 25px;
+      right: 25px;
+      top: 28px;
+    };
+    text-align: left;
+    vertical-align: bottom;
+
+    img {
+      @include inline-block;
+      max-height: 62px;
+      max-width: 170px;
+      width: 100%;
+    }
+
+    @include respond(tablets) {
+      width: 50%;
+    }
+
+    @include respond(landscape-phones) {
+      width: 50%;
+    }
+
+    @include respond("max-width: 499px") {
+      width: 100%;
+    }
+
+    @include respond(all-phones) {
+      height: 90px;
+      padding: 14px;
+    }
+  }
+}
+
+.application--header-mini-profile {
+  background: image-url('background/line-gradient.gif') repeat fixed;
+  border-left: 1px solid $grey;
+  border-right: 1px solid $grey;
+  @include column(3);
+  float: right;
+  font-family: $font-family;
+  font-weight: $font-weight-regular;
+  font-size: $norm;
+  margin-left: 0;
+
+  @include respond(tablets) {
+    width: 50%;
+  }
+
+  @include respond(landscape-phones) {
+    height: 90px;
+    width: 50%;
+  }
+
+  @include respond("max-width: 499px") {
+    background: none;
+    border: 0;
+    font-size: 0;
+    height: 0;
+    width: 0;
+  }
+
+  @include respond(hi_res) {
+    @include background-size(3px 3px);
+  }
+
+  .user {
+    @include clearfix;
+    border-bottom: 1px $grey solid;
+    color: $greyMidnight;
+    height: 90px;
+    padding: 10px 17px 10px;
+
+    @include respond(landscape-phones) {
+      min-height: 62px;
+      height: auto;
+    }
+
+    @include respond("max-width: 499px") {
+      border: 0;
+      height: auto;
+      padding: 0;
+    }
+
+  }
+
+  .user--information {
+    display: block;
+    padding: 10px 70px 0 0;
+
+    .profile {
+      color: $custom-primary;
+      display: block;
+      @include hyphenation;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    @include respond(landscape-phones) {
+      padding-top: 0;
+    }
+
+    @include respond("max-width: 499px") {
+      display: none;
+    }
+  }
+
+  .user--links {
+    font-family: $font-family;
+    font-weight: $font-weight-regular;
+    font-size: $xsmall;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 8px;
+
+    a {
+      color: $greyMidnight;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @include respond("max-width: 499px") {
+      display: none;
+    }
+  }
+
+  .user--avatar-wrap {
+    display: block;
+    position: absolute;
+    right: 17px;
+    top: 10px;
+
+    img {
+      max-width: none;
+    }
+
+    &:after {
+      background: $custom-primary;
+      @include border-radius(15px);
+      content: attr(data-notification);
+      color: #fff;
+      display: inline-block;
+      font-family: $font-family;
+      font-weight: $font-weight-bold;
+      font-size: $xsmall;
+      height: 15px;
+      line-height: 15px;
+      min-width: 15px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 2px;
+    }
+
+    &:hover:after  {
+      background: $custom-secondary;
+    }
+
+    @include respond("max-width: 499px") {
+      top: 14px;
+      right: 14px;
+    }
+  }
+}
+
+.application--navigation {
+  @include flushColumn(7);
+  float: right;
+
+
+  @include respond(tablets) {
+    border-top: 1px solid $grey;
+    clear: both;
+    width: 100%
+  }
+
+
+  @include respond(landscape-phones) {
+    border-top: 1px solid $grey;
+  }
+
+  @include respond(all-phones) {
+    clear: both;
+    width: 100%
+  }
+
+  ul {
+    @include clearfix;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    float: left;
+    padding: 0;
+    width: 20%;
+
+    &:first-child a:before {
+      display: none;
+    }
+
+    &.active a {
+      background: #fff;
+    }
+
+    &.active a,
+    &.active + li a {
+      margin-top: 0px;
+      padding-top: 44px;
+
+      @include respond(tablets) {
+        padding-top: 28px;
+      }
+
+      @include respond(all-phones) {
+        padding-top: 0;
+      }
+    }
+
+    &.active a [class*="icon-"]:before {
+      color: $greyMidnight;
+    }
+  }
+
+  a {
+    color: $greyMidnight;
+    display: block;
+    font: {
+      family: $font-family;
+      size: $norm;
+      weight: $font-weight-medium;
+    };
+    line-height: $norm;
+    margin-top: 44px;
+    padding-bottom: 28px;
+    position: relative;
+    text-align: center;
+    @include transition(all 0.2s ease-in-out);
+
+    @include respond(tablets) {
+      margin-top: 28px;
+    }
+
+    @include respond(all-phones) {
+      height: 40px;
+      line-height: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    [class*="icon-"]:before {
+      color: $greyMidnight;
+      display: block;
+      height: $larger;
+      line-height: $larger;
+      font-size: $larger;
+      margin-bottom: 10px;
+      text-align: center;
+      width: 100%;
+
+      @include respond(tablets) {
+        @include inline-block;
+        line-height: inherit;
+        margin: 0 10px 0 0;
+        width: auto;
+      }
+      @include respond(all-phones) {
+        display: none;
+      }
+    }
+
+    &:hover [class*="icon-"]:before {
+      color: $custom-secondary;
+    }
+
+    &:before {
+      background: $grey;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 1px;
+    }
+  }
+}
