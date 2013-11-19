@@ -5,7 +5,7 @@
 
   @include respond(all-phones) {
     min-width: 0;
-    padding: 0 5%;
+    padding: 0;
     width: 100%;
   }
 }
