@@ -1,18 +1,19 @@
 $:.push File.expand_path("../lib", __FILE__)
 
-# Maintain your gem's version:
-require "ydtd-frontend"
+require "ydtd_frontend"
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "ydtd-frontend"
+  s.name        = "ydtd_frontend"
   s.version     = YdtdFrontend::VERSION
-  s.authors     = ["Seb Ashton", "Rory MacDonald", "Scott Mason"]
+  s.authors     = ["Rory MacDonald", "Seb Ashton", "Scott Mason"]
   s.email       = ["rory@madebymade.co.uk"]
   s.homepage    = "http://www.madebymade.co.uk"
-  s.summary     = "Frontend website for the YDTD project."
+  s.summary     = "Frontend component for the YDTD application and marketing site."
   s.description = ""
 
-  s.files = Dir["{app,vendor,lib}/**/*"] + ["README.md"]
-  s.test_files = Dir["test/**/*"]
+  s.add_dependency "rails", ">= 3.1.0"
+  s.add_dependency "sass", ">= 3.1.20"
+
+  s.require_paths = ["lib", "app", "vendor"]
+  s.files       = `git ls-files`.split($\)
 end
