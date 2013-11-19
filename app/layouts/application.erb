@@ -3,7 +3,9 @@
 
   <%= partial "modules/breadcrumb", :object => {:breadcrumb => current_page.data.breadcrumb} %>
 
-  <%= yield %>
+  <main class="application--content">
+    <%= yield %>
+  </main>
 
   <%= partial "shared/footer" %>
 <% end %>

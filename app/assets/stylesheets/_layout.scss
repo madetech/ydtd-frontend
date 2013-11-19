@@ -1,12 +1,11 @@
 // application layout
-.application--header {
 
-}
+.application--content {
+  @include row();
 
-.application--breadcrumb {
-
-}
-
-.application--content-wrapper {
-  @include clearfix;
+  @include respond(all-phones) {
+    min-width: 0;
+    padding: 0 5%;
+    width: 100%;
+  }
 }
