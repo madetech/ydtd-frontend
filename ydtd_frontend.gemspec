@@ -1,6 +1,6 @@
 $:.push File.expand_path("../lib", __FILE__)
 
-require "ydtd_frontend"
+require "ydtd_frontend/version"
 
 Gem::Specification.new do |s|
   s.name        = "ydtd_frontend"
@@ -13,7 +13,10 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", ">= 3.1.0"
   s.add_dependency "sass", ">= 3.1.20"
+  s.add_dependency "modular-scale", ">= 1.0.6"
+  s.add_dependency "oj", ">= 2.2.2"
+  s.add_dependency "therubyracer", "0.12.0"
 
   s.require_paths = ["lib", "app", "vendor"]
-  s.files       = `git ls-files`.split($\)
+  s.files = Dir["{lib,app,vendor}/**/*"] + ["README.md"]
 end
