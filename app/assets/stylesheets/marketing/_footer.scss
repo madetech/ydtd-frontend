@@ -1,0 +1,56 @@
+.marketing--footer {
+  background: $white;
+  font-family: $font-family;
+  color: $greyMidnight;
+  padding: 50px 0;
+
+  & > div {
+    @include row;
+    padding: 0;
+
+    & > div {
+      @include column(5);
+    }
+
+    .ydtd-logo {
+      margin-bottom: 20px;
+    }
+
+    small {
+      @include font-size($xsmall);
+      line-height: $xsmall;
+    }
+
+    .marketing--information-links {
+      @include column(8);
+      @include font-size($norm);
+      float: right;
+      margin: 0;
+      padding: 0;
+      text-align: right;
+
+      li {
+        @include inline-block;
+
+        &:after {
+          content: '|';
+          padding-left: 4px;
+        }
+
+        &:last-child:after {
+          content: '';
+          padding-left: 0;
+        }
+      }
+
+      a {
+        color: $greyMidnight;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

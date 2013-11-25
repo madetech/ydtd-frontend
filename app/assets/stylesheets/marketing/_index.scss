@@ -1,0 +1,39 @@
+.marketing--centered-container {
+  @include column(8, center);
+  text-align: center;
+}
+
+.marketing--full-signup {
+  h3 {
+    @extend .marketing--centered-container;
+    color: $white;
+    @include font-size($xxxlarge);
+    font-weight: $font-weight-medium;
+    letter-spacing: -2px;
+    line-height: 32px;
+    margin: {
+      bottom: 50px;
+      top: 0;
+    };
+    padding: 0;
+  }
+
+ & > div {
+  background: $custom-secondary;
+  @include row;
+  padding-bottom: 20px;
+  text-align: center;
+
+  h4 {
+    color: $white;
+    @include font-size($xlarge);
+    font-weight: $font-weight-medium;
+    margin: 18px 0 0;
+  }
+
+  p {
+    font-weight: $font-weight-regular;
+    margin-top: 0;
+  }
+ }
+}

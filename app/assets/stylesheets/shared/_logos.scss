@@ -20,6 +20,17 @@
   .svg & {
     background-image: image-url('logo/dark-your-day-thier-day.svg');
   }
+
+  &.sml {
+    background-image: image-url('logo/dark-your-day-thier-day-sml.png');
+    @include background-size(104px 60px);
+    height: 60px;
+    width: 104px;
+
+    .svg & {
+      background-image: image-url('logo/dark-your-day-thier-day.svg');
+    }
+  }
 }
 
 .white-ydtd-logo {
@@ -28,6 +39,14 @@
 
   .svg & {
     background-image: image-url('logo/white-your-day-thier-day.svg');
+  }
+
+  &.sml {
+    background-image: image-url('logo/white-your-day-thier-day-sml.png');
+
+    .svg & {
+      background-image: image-url('logo/white-your-day-thier-day.svg');
+    }
   }
 }
 
@@ -40,6 +59,14 @@
 
   .svg & {
     background-image: image-url('logo/grey-your-day-thier-day.svg');
+  }
+
+  &.sml {
+    background-image: image-url('logo/grey-your-day-thier-day-sml.png');
+
+    .svg & {
+      background-image: image-url('logo/grey-your-day-thier-day.svg');
+    }
   }
 }
 

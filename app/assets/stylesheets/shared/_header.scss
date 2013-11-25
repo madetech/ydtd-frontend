@@ -1,3 +1,52 @@
+.header--masthead {
+  background: image-url('background/marketing-masthead.jpg') top center;
+  color: #fff;
+  padding: {
+    bottom: 85px;
+    top: 120px;
+  };
+
+  & > div {
+    @include row;
+
+    @include respond(tablets) {
+      padding: 0;
+    }
+
+    @include respond(all-phones) {
+      padding: 0;
+    }
+  }
+
+  .white-ydtd-logo {
+    @include background-size(170px 97px);
+    height: 97px;
+    width: 170px;
+  }
+
+  h2, p {
+    @include column(8, center);
+    padding: 0;
+    text-align: center;
+  }
+
+  h2 {
+    color: #fff;
+    font: {
+      size: 54px;
+      weight: $font-weight-thin;
+    }
+    letter-spacing: -4px;
+    line-height: 54px;
+    margin: 60px auto 0;
+  }
+
+  p {
+    margin: 27px auto 0;
+    padding: 0 30px;
+  }
+}
+
 .application--header {
   background: $greyLighter;
   border-bottom: 3px solid $custom-primary;

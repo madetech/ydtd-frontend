@@ -1,0 +1,65 @@
+%form--inline {
+  @include clearfix;
+
+  label {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 0;
+  }
+
+  input {
+    float: left;
+  }
+
+  button {
+    float: left;
+  }
+}
+
+.form--inline-2-inputs {
+  @extend %form--inline;
+
+  input {
+    width: 30%;
+    margin: 0 3% 0 0;
+  }
+
+  button {
+    width: 30%;
+  }
+}
+
+.form--inline-3-inputs {
+  @extend %form--inline;
+
+  input {
+    width: 24%;
+    margin: 0 1% 0 0;
+  }
+
+  button {
+    width: 25%;
+  }
+}
+
+.form--inline-2-inputs--button-pushed {
+  @extend .form--inline-2-inputs;
+  position: relative;
+
+  input {
+    margin: 0;
+    width: 49%;
+
+    & + input {
+      float: right;
+    }
+  }
+
+  button {
+    float: none;
+    position: absolute;
+    right: -165px;
+    width: 150px;
+  }
+}

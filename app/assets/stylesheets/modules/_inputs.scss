@@ -111,7 +111,7 @@ label {
   input {
     &:checked + label:after {
       background-color: $custom-primary;
-      @include border-radius(4px);
+      @include border-radius(3px);
       content: "";
       height: 8px;
       left: 6px;
@@ -145,13 +145,18 @@ input {
   &[type=email],
   &[type=text],
   &[type=password] {
-    @include border-radius(5px);
+    @include border-radius(3px);
     margin: {
       bottom: 10px;
       top: 10px;
     }
     padding: 0.65em 16px 0.64em;
     width: 440px;
+
+    &.large {
+      @include font-size($large);
+      padding: 18px;
+    }
   }
 
   &.error {

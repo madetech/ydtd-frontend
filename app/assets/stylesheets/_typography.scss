@@ -220,6 +220,22 @@ abbr {
   text-transform: none;
 }
 
+.highlight-primary {
+  color: $custom-primary;
+  font: {
+    style: inherit;
+    weight: inherit;
+  };
+}
+
+.highlight-secondary {
+  color: $custom-secondary;
+  font: {
+    style: inherit;
+    weight: inherit;
+  };
+}
+
 /**
    * Print styles.
  *

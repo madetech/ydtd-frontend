@@ -13,6 +13,8 @@ page "/", :layout => "application"
 page "/tabbed_lists.html", :layout => "application"
 page "/tabbed_lists_2.html", :layout => "application"
 
+page "/marketing/"
+
 activate :livereload
 activate :i18n
 

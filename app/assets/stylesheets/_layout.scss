@@ -9,3 +9,40 @@
     width: 100%;
   }
 }
+
+.row {
+  width: 100%;
+  max-width: $row-max-width + 40px;
+  min-width: $min-device-width;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  .row {
+    min-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+%section {
+  padding: {
+    bottom: 75px;
+    top: 75px;
+  };
+
+  &.uneven {
+    padding-bottom: 30px;
+  }
+}
+
+.section-grey {
+  @extend %section;
+  background: $grey;
+  color: #fff;
+}
+
+.section-primary {
+  @extend %section;
+  background: adjust-hue(adjust-lightness($custom-primary, -10%), 3);
+  color: #fff;
+}

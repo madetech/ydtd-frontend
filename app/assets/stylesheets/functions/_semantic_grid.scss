@@ -44,7 +44,7 @@
 
 @mixin column($columns: $columns, $alignment: false, $behavior: false, $hybrid: false) {
   @extend %columnconfig;
-  @if $alignment == center   {
+  @if $alignment == center {
     float: none;
     margin-left: auto !important;
     margin-right: auto !important;
