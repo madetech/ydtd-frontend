@@ -13,3 +13,7 @@ body * {
 .full-height {
   min-height: 100%;
 }
+
+.no-mobile {
+  @include hidden(all-phones);
+}

@@ -4,6 +4,14 @@
   color: $greyMidnight;
   padding: 50px 0;
 
+  @include respond(portrait-tablets) {
+    padding: 40px 20px;
+  }
+
+  @include respond(all-phones) {
+    padding: 30px 0;
+  }
+
   & > div {
     @include row;
     padding: 0;
@@ -14,16 +22,32 @@
 
     .ydtd-logo {
       margin-bottom: 20px;
+
+      @include respond(all-phones) {
+        margin: 0 auto 20px;
+      }
     }
 
     small {
       @include font-size($xsmall);
-      line-height: $xsmall;
+      line-height: $xsmall+2;
+
+      a {
+        color: $greyMidnight;
+        text-decoration: none;
+      }
+
+      @include respond(all-phones) {
+        display: block;
+        padding: 0 5%;
+        text-align: center;
+      }
     }
 
     .marketing--information-links {
       @include column(8);
       @include font-size($norm);
+      @include hidden(all-phones);
       float: right;
       margin: 0;
       padding: 0;

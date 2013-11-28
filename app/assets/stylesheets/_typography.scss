@@ -174,29 +174,55 @@ h1 small, h2 small, h3 small, h4 small, h5 small {
 
 /*  Blockquotes  */
 
+.blockquote-block {
+  margin-bottom: -35px !important;
+}
+
 blockquote {
-  line-height: 20px;
-  color: #777;
-  p {
-    line-height: 20px;
-    color: #777;
+  margin: 0 0 35px;
+  padding: 0;
+  text-align: center;
+
+  & > p {
+    margin-top: 0;
   }
-  margin: 0 0 18px;
-  padding: 9px 20px 0 19px;
-  border-left: 5px solid grey;
+
+  p {
+    color: $greyMidnight;
+    font-family: $font-family-serif;
+    @include font-size($large);
+    font-style: $font-style-italic;
+    line-height: normal;
+    text-align: center;
+  }
+
   cite {
     display: block;
     font-size: 12px;
     font-size: 1.2rem;
-    color: grey;
-    &:before {
-      content: "\2014 \0020";
-    }
+    color: $greyMidnight;
+
     a {
-      color: grey;
+      color: #010101;
       &:visited {
-        color: grey;
+        color: #010101;
       }
+    }
+
+    & > span {
+      display: table;
+      text-align: center;
+      width: 100%;
+
+      a {
+        display: table-cell;
+        vertical-align: center;
+      }
+    }
+
+    img {
+      max-height: 60px;
+      max-width: 190px;
     }
   }
 }

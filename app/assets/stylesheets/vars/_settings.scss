@@ -11,7 +11,8 @@ $document-width: $row-max-width;                                // Default Docum
 $max-device-width: 2000px;                                      // Max Document Size
 
 // Typography
-$font-family: 'Gotham SSm A', 'Gotham SSm B', "Helvetica", Helvetica, Arial, sans-serif;;
+$font-family: 'Gotham SSm A', 'Gotham SSm B', "Helvetica", Helvetica, Arial, sans-serif;
+$font-family-serif: Times, 'Times New Roman', Georgia, serif;
 $font-style-italic: italic;
 $icons: entypo;
 $font-smoothing: antialiased;

@@ -24,7 +24,7 @@
   }
 }
 
-%section {
+%bg {
   padding: {
     bottom: 75px;
     top: 75px;
@@ -33,16 +33,94 @@
   &.uneven {
     padding-bottom: 30px;
   }
+
+  @include respond(portrait-tablets) {
+    padding: {
+      bottom: 50px;
+      top: 50px;
+    };
+
+    &.uneven {
+      padding-bottom: 20px;
+    }
+  }
+
+  @include respond(all-phones){
+    padding: {
+      bottom: 25px;
+      top: 25px;
+    };
+
+    &.uneven {
+      padding-bottom: 10px;
+    }
+  }
 }
 
-.section-grey {
-  @extend %section;
+.bg-white {
+  @extend %bg;
+  background: $white;
+  color: $greyDarkest;
+}
+
+.bg-grey {
+  @extend %bg;
   background: $grey;
   color: #fff;
 }
 
-.section-primary {
-  @extend %section;
+.bg-grey-lighter {
+  @extend %bg;
+  background: $greyLighter;
+  color: $greyDarkest;
+}
+
+.bg-primary {
+  @extend %bg;
   background: adjust-hue(adjust-lightness($custom-primary, -10%), 3);
   color: #fff;
+}
+
+%list-tiled {
+  @include clearfix;
+  @include row;
+
+  @include respond(all-phones) {
+    padding: 0;
+  }
+
+  li {
+    float: left;
+    padding: 0 30px;
+
+    @include respond(all-phones) {
+      float: none;
+      margin-bottom: 30px;
+      padding: 0 5%;
+    }
+  }
+}
+
+.list-two-tiles  {
+  @extend %list-tiled;
+
+  li {
+    width: 50%;
+
+    @include respond(all-phones) {
+      width: 100%;
+    }
+  }
+}
+
+.list-three-tiles  {
+  @extend %list-tiled;
+
+  li {
+    width: 33%;
+
+    @include respond(all-phones) {
+      width: 100%;
+    }
+  }
 }

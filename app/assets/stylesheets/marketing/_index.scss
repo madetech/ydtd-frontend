@@ -1,6 +1,175 @@
+.header--masthead {
+  background: image-url('background/marketing-masthead.jpg') top center;
+  color: #fff;
+  padding: {
+    bottom: 85px;
+    top: 120px;
+  };
+
+  @include respond(portrait-tablets) {
+    padding: {
+      bottom: 60px;
+      top: 75px;
+    };
+  }
+
+  @include respond(all-phones) {
+    padding: {
+      bottom: 40px;
+      top: 50px;
+    };
+  }
+
+  & > div {
+    @include row;
+
+    @include respond(tablets) {
+      padding: 0;
+    }
+
+    @include respond(all-phones) {
+      padding: 0;
+    }
+  }
+
+  .white-ydtd-logo {
+    @include background-size(170px 97px);
+    height: 97px;
+    width: 170px;
+  }
+
+  h2, p {
+    @include column(8, center);
+    padding: 0;
+    text-align: center;
+  }
+
+  h2 {
+    color: #fff;
+    font: {
+      size: 54px;
+      weight: $font-weight-thin;
+    }
+    letter-spacing: -4px;
+    line-height: 54px;
+    margin: 60px auto 0;
+
+    @include respond(all-phones) {
+      display: none;
+    }
+  }
+
+  p {
+    margin: 27px auto 0;
+    padding: 0 30px;
+  }
+}
+
+
 .marketing--centered-container {
   @include column(8, center);
   text-align: center;
+}
+
+.marketing--feature-boast {
+  text-align: center;
+
+  [class*="icon-"] {
+    @include border-radius(200px);
+    display: table;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+
+    &:bofore {
+      display: none;
+    }
+
+    i {
+      color: $white;
+      display: table-cell;
+      vertical-align: center;
+    }
+
+    @include respond(portrait-tablets) {
+      @include border-radius(175px);
+      height: 175px;
+      width: 175px;
+    }
+
+    @include respond(all-phones){
+      @include border-radius(75px);
+      float: left;
+      height: 75px;
+      width: 75px;
+    }
+  }
+
+  .icon-clock {
+    background: $orange;
+  }
+
+  .icon-user-add {
+    background: $green;
+  }
+
+  .icon-marker {
+    background: $blue;
+  }
+
+  h2 {
+    color: $greyDarkest;
+    @include font-size($larger);
+    font-weight: $font-weight-medium;
+    line-height: $larger;
+    margin-bottom: 5px;
+
+    @include respond(portrait-tablets) {
+      @include font-size($large);
+      line-height: $large+1;
+    }
+
+    @include respond(all-phones){
+      @include font-size($norm);
+      line-height: $norm+1;
+      padding-left: 90px;
+      text-align: left;
+    }
+  }
+
+  p {
+    @include font-size($norm);
+    font-weight: $font-weight-regular;
+    line-height: normal;
+    margin-top: 5px;
+    text-align: center;
+
+    @include respond(portrait-tablets) {
+      @include font-size($small);
+      line-height: $small;
+    }
+
+    @include respond(all-phones){
+      @include font-size($small);
+      padding-left: 90px;
+      text-align: left;
+    }
+  }
+}
+
+.marketing--quotes {
+  & > div {
+    @include row;
+  }
+
+  .list-two-tiles {
+    @include column(9, center);
+    min-width: 0;
+
+    @include respond(portrait-tablets) {
+      width: 100%;
+    }
+  }
 }
 
 .marketing--full-signup {
