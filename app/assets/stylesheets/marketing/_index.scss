@@ -1,5 +1,6 @@
 .header--masthead {
   background: image-url('background/marketing-masthead.jpg') top center;
+  @include background-size(auto 100%);
   color: #fff;
   padding: {
     bottom: 85px;
@@ -63,8 +64,21 @@
     margin: 27px auto 0;
     padding: 0 30px;
   }
-}
 
+  .header--signup {
+    background: rgba(32, 32, 32, 0.55);
+    @include column(9, center);
+    margin-top: 27px;
+    padding: 20px;
+    text-align: center;
+
+    p {
+      margin-top: 20px;
+      padding: 0;
+      width: auto;
+    }
+  }
+}
 
 .marketing--centered-container {
   @include column(8, center);
