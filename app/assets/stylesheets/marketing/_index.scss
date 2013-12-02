@@ -102,13 +102,18 @@
     i {
       color: $white;
       display: table-cell;
-      vertical-align: center;
+      @include font-size(100px);
+      vertical-align: middle;
     }
 
     @include respond(portrait-tablets) {
       @include border-radius(175px);
       height: 175px;
       width: 175px;
+
+      i {
+        @include font-size(80px);
+      }
     }
 
     @include respond(all-phones){
@@ -116,6 +121,10 @@
       float: left;
       height: 75px;
       width: 75px;
+
+      i {
+        @include font-size(40px);
+      }
     }
   }
 
@@ -129,6 +138,12 @@
 
   .icon-marker {
     background: $blue;
+  }
+
+  li {
+    @include respond(all-phones){
+      min-height: 75px;
+    }
   }
 
   h2 {
@@ -187,6 +202,10 @@
 }
 
 .marketing--full-signup {
+  @include respond(all-phones) {
+    padding: 0;
+  }
+
   h3 {
     @extend .marketing--centered-container;
     color: $white;
@@ -201,22 +220,30 @@
     padding: 0;
   }
 
- & > div {
-  background: $custom-secondary;
-  @include row;
-  padding-bottom: 20px;
-  text-align: center;
+  & > div {
+    background: $custom-secondary;
+    @include row;
+    padding-bottom: 20px;
+    text-align: center;
 
-  h4 {
-    color: $white;
-    @include font-size($xlarge);
-    font-weight: $font-weight-medium;
-    margin: 18px 0 0;
+    h4 {
+      color: $white;
+      @include font-size($xlarge);
+      font-weight: $font-weight-medium;
+      margin: 18px 0 0;
+
+      @include respond(all-phones) {
+        margin: 9px 0 3px;
+      }
+    }
+
+    p {
+      font-weight: $font-weight-regular;
+      margin-top: 0;
+    }
   }
 
-  p {
-    font-weight: $font-weight-regular;
-    margin-top: 0;
+  .success p {
+    text-align: center;
   }
- }
 }

@@ -97,6 +97,10 @@
       float: none;
       margin-bottom: 30px;
       padding: 0 5%;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
