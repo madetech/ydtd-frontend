@@ -219,15 +219,22 @@ button {
       background-color: $custom-header;
       border-radius: $border-radius;
       color: #fff;
+      line-height: 21px;
+      min-height: 21px;
+      min-width: 21px;
       @include inline-block;
-      padding: 2px 6px;
+      padding: 0 6px;
     }
 
     a {
       border-radius: $border-radius;
       color: #000;
+      line-height: 21px;
+      min-height: 21px;
+      min-width: 21px;
       @include inline-block;
-      padding: 2px 6px;
+      padding: 0 6px;
+      text-align: center;
 
       &:hover {
         background-color: $custom-primary;
@@ -241,7 +248,6 @@ button {
     &.last {
       a {
         font-weight: $font-weight-light;
-        padding-right: 8px;
       }
     }
   }
