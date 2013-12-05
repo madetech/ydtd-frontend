@@ -12,27 +12,34 @@ window.CampaignMonitorSubmit = class CampaignMonitorSubmit
 
   attach: (form) ->
     $(form).submit (e) =>
+      e.preventDefault()
+
       $elem = $(e.currentTarget)
       url = $elem.attr('action')
+
+      if $(form).find('input[type="email"]').val().length < 1
+        @showError form, "Please enter your email address"
+        return
 
       $elem.find('button').prop('disabled', true);
       $.getJSON "#{url}?callback=?", $elem.serialize(), (data) =>
         console.log data
         if data.Status is 400
           $elem.find('button').prop('disabled', false);
-          @showError form, data
+          @showError form, data.Message
         else # 200
           @showSuccess form, data
           @sendTracking if typeof(ga) isnt 'undefined'
-      e.preventDefault()
+
 
   sendTracking: ->
     ga('send', 'event', 'form', 'submit', 'campaign monitor sign-up');
 
-  showError: (form, data) ->
+  showError: (form, message) ->
+    alert message
     $(form).find('[type="email"]').addClass('error')
-    @addErrorHtml(form) if $(form).find('.error-message') < 1
-    $(form).find('.error-message').text data.Message
+    @addErrorHtml(form) if $(form).find('.error-message').length < 1
+    $(form).find('.error-message').text message
 
   showSuccess: (form, data) ->
     $(form).wrapInner('<div class="success" />')

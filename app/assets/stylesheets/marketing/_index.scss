@@ -77,6 +77,17 @@
       padding: 0;
       width: auto;
     }
+
+    .success p,
+    .error-message {
+      margin-top: 0;
+    }
+
+    .error-message {
+      @include font-size($xsmall);
+      line-height: 15px;
+      margin-bottom: 20px;
+    }
   }
 }
 
