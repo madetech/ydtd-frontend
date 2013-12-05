@@ -23,7 +23,11 @@ window.CampaignMonitorSubmit = class CampaignMonitorSubmit
           @showError form, data
         else # 200
           @showSuccess form, data
+          @sendTracking if typeof(ga) isnt 'undefined'
       e.preventDefault()
+
+  sendTracking: ->
+    ga('send', 'event', 'form', 'submit', 'campaign monitor sign-up');
 
   showError: (form, data) ->
     $(form).find('[type="email"]').addClass('error')
