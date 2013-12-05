@@ -1,0 +1,5 @@
+en:
+  form:
+    error_no_email: Please enter your email address
+    signup_error: There was an problem submitting your sign up
+    signup_success: "Thank you for registering your interest, we'll be touch"

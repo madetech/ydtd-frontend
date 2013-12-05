@@ -16,7 +16,7 @@ page "/tabbed_lists_2.html", :layout => "application"
 page "/marketing/"
 
 activate :livereload
-activate :i18n
+activate :i18n, :langs => [:en]
 
 set :source, "app"
 set :css_dir, "assets/stylesheets"
