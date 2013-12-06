@@ -1,0 +1,98 @@
+%form--inline {
+  @include clearfix;
+
+  label {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    width: 0;
+  }
+
+  input {
+    float: left;
+  }
+
+  button {
+    float: left;
+  }
+
+  @include respond(portrait-tablets) {
+    button {
+      clear: left;
+      float: none;
+      margin-top: 6px !important;
+      width: 100% !important;
+    }
+  }
+
+  @include respond(all-phones) {
+    button,
+    input {
+      float: none;
+      margin-top: 6px !important;
+      width: 100% !important;
+    }
+  }
+}
+
+.form--inline-2-inputs {
+  @extend %form--inline;
+
+  input {
+    width: 32%;
+    margin: 0 1% 0 0;
+  }
+
+  button {
+    width: 33%;
+  }
+}
+
+.form--inline-3-inputs {
+  @extend %form--inline;
+
+  input {
+    width: 24%;
+    margin: 0 1% 0 0;
+
+    @include respond(portrait-tablets) {
+      margin-right: 1%;
+      width: 33%;
+
+      &:last-of-type {
+        margin-right: 0;
+        width: 32%;
+      }
+    }
+  }
+
+  button {
+    width: 25%;
+  }
+}
+
+.form--inline-2-inputs--button-pushed {
+  @extend .form--inline-2-inputs;
+  position: relative;
+
+  input {
+    margin: 0;
+    width: 49%;
+
+    & + input {
+      float: right;
+    }
+  }
+
+  button {
+    float: none;
+    position: absolute;
+    right: -165px;
+    width: 150px;
+
+    @include respond(portrait-tablets) {
+      position: static;
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+---
+title: Tabbed Lists
+body_class: bohek
+---
+<div id="tabbed-list-container" class="list-container">
+  <div id="table-tabs">
+    <%= partial "modules/search_bar", :locals => {:placeholder => 'Search Lists?'} %>
+    <a href="tabbed_lists.html" class="active">
+      <span>Active</span>
+      <span class="tab-figure">788</span>
+    </a>
+    <a href="tabbed_lists_2.html">
+      <span>Unsubscribed</span>
+      <span class="tab-figure">0</span>
+    </a>
+    <a href="#">
+      <span>Bounced</span>
+      <span class="tab-figure">102</span>
+    </a>
+    <a href="#">
+      <span>Deleted</span>
+      <span class="tab-figure">0</span>
+    </a>
+  </div>
+
+  <div id="subscribers-container" data-pjax-container>
+    <table>
+      <tr class="table-headers">
+        <th class="desktop-only">Email Address</th>
+        <th>Name</th>
+        <th class="subscribed-column">Subscribed</th>
+        <th class="checkbox-column">
+          <div class="checkbox-wrap">
+            <input type="checkbox" id="check_all"/>
+            <label for="check_all"></label>
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td class="desktop-only">example@one.com</td>
+        <td>Joe Bloggs</td>
+        <td>01/11/14</td>
+        <td>
+          <div class="checkbox-wrap">
+            <input type="checkbox" id="check_one"/>
+            <label for="check_one"></label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="desktop-only">example@two.com</td>
+        <td>John Doe</td>
+        <td>01/11/14</td>
+        <td>
+          <div class="checkbox-wrap">
+            <input type="checkbox" id="check_one"/>
+            <label for="check_one"></label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="desktop-only">example@three.com</td>
+        <td>Jane Doe</td>
+        <td>01/11/14</td>
+        <td>
+          <div class="checkbox-wrap">
+            <input type="checkbox" id="check_one"/>
+            <label for="check_one"></label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="desktop-only">example@four.com</td>
+        <td>Keyser Soze</td>
+        <td>01/11/14</td>
+        <td>
+          <div class="checkbox-wrap">
+            <input type="checkbox" id="check_one"/>
+            <label for="check_one"></label>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div id="updates-list-container" class="list-container">
+  <table>
+    <tr class="table-headers">
+      <th>Recent Updates</th>
+      <th class="time-ago">
+    </tr>
+    <tr>
+      <td>
+        <span class="status draft">Draft</span>
+        Rory created a new profile
+      </td>
+      <td class="time-ago">6 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="status sent">Sent</span>
+        Rory created a new profile
+      </td>
+      <td class="time-ago">6 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="status draft">Draft</span>
+        Rory created a new profile
+      </td>
+      <td class="time-ago">6 hours ago</td>
+    </tr>
+  </table>
+</div>

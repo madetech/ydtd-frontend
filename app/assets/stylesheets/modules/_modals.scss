@@ -1,0 +1,38 @@
+.modal {
+  @include box-shadow($box-shadow-large);
+
+  .modal--content {
+    @include border-radius($border-radius);
+    background: $greyLightest;
+    padding: 35px 38px;
+
+    @include respond(all-phones) {
+      padding: 22px 20px;
+    }
+  }
+}
+
+.modal-w-header {
+  @extend .modal;
+
+  .modal--header {
+    background: $white;
+    border-bottom: 1px solid $grey;
+    @include border-radius($border-radius $border-radius 0 0);
+    padding: 22px 38px;
+    text-align: center;
+
+    @include respond(all-phones) {
+      padding: 12px 20px;
+    }
+  }
+
+  h1 {
+    color: $custom-header;
+    margin: 0;
+  }
+
+  .modal--content {
+    @include border-radius(0 0 $border-radius $border-radius);
+  }
+}

@@ -1,0 +1,30 @@
+.application--breadcrumb {
+  background: $greyLight;
+  border: {
+    bottom: 1px solid $greyDarker;
+  };
+
+  ul {
+    margin: 0;
+    @include row;
+  }
+
+  li {
+    color: $greyDarkest;
+    font-family: $font-family;
+    @include font-size($small);
+    float: left;
+    margin: 15px 2px 13px 0;
+  }
+
+  a {
+    border-bottom: 1px solid $greyDarkest;
+    color: #000;
+    font-weight: $font-weight-medium;
+    @include inline-block;
+
+    &:hover {
+      color: $custom-secondary;
+    }
+  }
+}

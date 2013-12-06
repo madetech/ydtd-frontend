@@ -1,0 +1,11 @@
+<% wrap_layout :layout do %>
+  <%= partial "shared/header", :locals => {:active => current_page.data.active} %>
+
+  <%= partial "modules/breadcrumb", :object => {:breadcrumb => current_page.data.breadcrumb} %>
+
+  <main class="application--content">
+    <%= yield %>
+  </main>
+
+  <%= partial "shared/footer" %>
+<% end %>

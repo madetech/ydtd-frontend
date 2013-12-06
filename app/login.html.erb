@@ -1,0 +1,29 @@
+---
+title: Login
+body_class: bohek
+html_class: full-height
+---
+
+<div class="row">
+  <div class="login-modal-container">
+
+    <div class="ydtd-logo-group">
+      <%= partial "shared/logo-white" %>
+    </div>
+
+    <%= partial "modules/modal", :locals => {
+      :id => "login",
+      :content => "<form><fieldset><label for='email'>YourEmail</label>
+    <input type='email' id='email' name='email' /><label for='password'>YourPassword</label><input type='password' id='password' name='password' /><div class='checkbox-wrap'><input type='checkbox' id='checkbox' name='ydtd-checkbox' value='selected' /><label for='checkbox'>Keep me logged in</label>
+    </div><button class='submit'>Login</button></fieldset></form>"
+    } %>
+
+    <p><a href="/reset-password.html" class="light">Can't access your account?</a></p>
+  </div>
+</div>
+
+<footer class="footer--minimal">
+  <small class="copyright">
+    © <span itemprop="copyrightYear">2013</span> YourDayTheirDay Limited. All rights reserved. <span itemprop="copyrightHolder" itemscope="" itemtype="http://schema.org/Organization">A <a itemprop="url" href="http://madebymade.co.uk" target="_blank"><span itemprop="name">Made by Made</span></a> Company</span>
+  </small>
+</footer>

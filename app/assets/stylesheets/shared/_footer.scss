@@ -1,0 +1,97 @@
+.footer--minimal {
+  color: $white;
+  border-top: 2px solid $white;
+  font-family: $font-family;
+  font-weight: $body-font-weight;
+  min-width: $row-max-width;
+  padding: 70px 5%;
+  text-align: center;
+
+
+  @include respond(tablets) {min-width: 0;}
+  @include respond(all-phones) {
+    min-width: 0;
+    padding: 30px 5%;
+  }
+
+  .copyright {
+    @include font-size($small);
+
+    a {
+      color: $grey;
+    }
+  }
+}
+
+
+.application--footer {
+  border-top: 1px solid $greyDarker;
+  margin-top: 40px;
+  padding: 45px 0;
+
+  @include respond(all-phones) {
+    padding: 15px 0;
+  }
+
+  & > div {
+    @include row;
+  }
+
+  .application--footer-logo {
+    @include flushColumn(7);
+    @include push(3, true);
+    float: left;
+
+    @include respond(all-phones) {
+      float: none;
+      margin-top: 15px;
+      width: 100%;
+
+      .grey-ydtd-logo {
+        @include background-size(52px 30px);
+        height: 30px;
+        width: 52px;
+      }
+    }
+  }
+
+  .application--links {
+    @include column(3);
+    float: right;
+    margin-left: 0;
+
+    @include respond(all-phones) {
+      float: none;
+      width: 100%;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      @include respond(all-phones) {
+        text-align: center;
+      }
+    }
+
+    li {
+      padding: 0;
+
+      @include respond(all-phones) {
+        @include inline-block;
+        padding: 0 5px;
+      }
+    }
+
+    a {
+      font-family: $font-family;
+      @include font-size($xsmall);
+      font-weight: $font-weight-regular;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}

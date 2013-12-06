@@ -1,0 +1,169 @@
+.list-container {
+  background-color: $greyLightest;
+  font-family: $font-family;
+  padding: 20px;
+}
+
+#table-tabs {
+
+  a {
+    background-color: $grey;
+    border: {
+      bottom: 1px solid none;
+      left: 1px solid $grey;
+      right: 1px solid $grey;
+      top: 2px solid $grey;
+    }
+    @include box-sizing(border-box);
+    color: #000;
+    @include inline-block;
+    margin-right: 1px;
+    padding: 9px 14px;
+
+    span {
+      display: block;
+      @include font-size($norm);
+
+      &.tab-figure {
+        @include font-size($xxlarge);
+      }
+    }
+
+    &:hover {
+      background-color: $custom-secondary;
+      border-color: $custom-secondary;
+      color: $white;
+    }
+
+    &.active {
+      background-color: $white;
+      border: {
+        bottom: 2px solid $white;
+        left: 1px solid $grey;
+        right: 1px solid $grey;
+        top: 3px solid $custom-secondary;
+      }
+      color: #000;
+      margin-bottom: -1px;
+    }
+
+    @include respond(all-phones) {
+      border-top: 1px solid #000;
+      width: 100%;
+    }
+  }
+
+  #search-wrap {
+    text-align: right;
+    width: 100%;
+  }
+
+  .search-bar {
+    float: right;
+    @include inline-block(middle);
+    margin-top: 14px;
+    width: auto;
+
+    @include respond(all-phones) {
+      margin: {
+        bottom: 20px;
+        top: 0;
+      }
+    }
+  }
+}
+
+#subscribers-container,
+#updates-list-container {
+  table {
+    table-layout: fixed;
+    text-align: left;
+    width: 100%;
+
+    th,
+    td {
+      @include font-size($small);
+      font-weight: $font-weight-regular;
+      padding: 9px 14px;
+    }
+
+    th {
+      cursor: pointer;
+    }
+
+    .subscribed-column {
+      width: 200px;
+
+      &:after {
+        color: $custom-secondary;
+        content: "\e600";
+        @include inline-block;
+        font-family: 'icomoon';
+        margin-left: 5px;
+        @include rotate(180deg);
+      }
+
+      @include respond(all-phones) {
+        width: auto;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .checkbox-column {
+      width: 46px;
+    }
+
+    .table-headers {
+      background-color: $white;
+      border: 1px solid $grey;
+    }
+
+    tr {
+      border-bottom: 1px solid $grey;
+    }
+  }
+}
+
+#updates-list-container {
+  .status {
+    @include border-radius(5px);
+    color: $white;
+    @include inline-block;
+    @include font-size($xsmall);
+    font-weight: $font-weight-semibold;
+    left: -15px;
+    padding: 2px 5px;
+    position: relative;
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+    width: 50px;
+
+    &.draft {
+      background-color: $custom-secondary;
+    }
+
+    &.sent {
+      background-color: $custom-primary;
+    }
+
+    @include respond(all-phones) {
+      display: block;
+      margin-left: 15px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .time-ago {
+    text-align: right;
+    width: 200px;
+
+    @include respond(all-phones) {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,326 @@
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font-family;
+  font-weight: $header-font-weight;
+  color: grey;
+  text-rendering: optimizeLegibility;
+  @include padding-leader($rhythm-spacing);
+  @include adjust-leading-to($rhythm-height);
+  @include padding-trailer($rhythm-spacing);
+  a {
+    color: grey;
+  }
+}
+
+@include respond(all-phones) {
+  h1,h2,h3,h4,h5,h6 { word-wrap: break-word;}
+}
+
+h1 {
+  @include font-size($xxlarge);
+  &.larger {
+    @include font-size($xlarge);
+  }
+  &.xlarge {
+    @include font-size($reallybig);
+  }
+  &.xxlarge {
+    @include font-size($tremendous);
+  }
+  &.absurd {
+    @include font-size($absurd);
+  }
+}
+h2 { @include font-size($xlarge); }
+h3 { @include font-size($larger);}
+h4 { @include font-size($large);}
+h5 { @include font-size($med);}
+h6 { @include font-size($norm);}
+
+@include respond(all-phones) {
+
+  h1 { @include font-size($xlarge);}
+  h2 { @include font-size($larger + 6);}
+
+}
+
+.subhead {
+  color: #777;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+/*=====================================================
+
+  Links & Paragraph styles
+
+  ======================================================*/
+
+p {
+  font-family: $font-family;
+  font-weight: $body-font-weight;
+  @include font-size($base-font-size);
+  margin-bottom: $base-line-height / 2;
+  @include adjust-leading-to(1);
+  &.lead {
+    @include font-size(ms(0) * 1.25);
+    margin-bottom: ms(1);
+  }
+  @include respond(portrait-tablets) {
+    @include font-size($base-font-size * 1.1);
+    @include adjust-leading-to(1);
+  }
+}
+
+a {
+  color: grey;
+  outline: 0;
+  line-height: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: grey;
+  }
+
+  &.light {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/*=====================================================
+
+  Lists
+
+ ======================================================*/
+
+ul, ol {
+  @include margin-trailer($rhythm-spacing);
+}
+
+ul {
+  list-style: none outside;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 30px;
+}
+
+ul {
+  &.square, &.circle, &.disc {
+    margin-left: 25px;
+  }
+  &.square {
+    list-style: square outside;
+  }
+  &.circle {
+    list-style: circle outside;
+  }
+  &.disc {
+    list-style: disc outside;
+  }
+  ul {
+    margin: 4px 0 5px 25px;
+  }
+}
+
+ol ol {
+  margin: 4px 0 5px 30px;
+}
+
+li {
+  @include padding-trailer($rhythm-spacing);
+}
+
+ul.large li {
+  line-height: 21px;
+}
+
+dl dt {
+  font-weight: bold;
+  @include font-size($norm);
+}
+
+@include respond(portrait-tablets) {
+
+  ul, ol, dl, p { text-align: left;}
+
+}
+
+/* Mobile */
+
+em {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong {
+  font-weight: $font-weight-bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: 56.4%;
+  line-height: inherit;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small {
+  color: #777;
+}
+
+/*  Blockquotes  */
+
+.blockquote-block {
+  margin-bottom: -35px !important;
+}
+
+blockquote {
+  margin: 0 0 35px;
+  padding: 0;
+  text-align: center;
+
+  & > p {
+    margin-top: 0;
+  }
+
+  p {
+    color: $greyMidnight;
+    font-family: $font-family-serif;
+    @include font-size($large);
+    font-style: $font-style-italic;
+    line-height: normal;
+    text-align: center;
+  }
+
+  cite {
+    display: block;
+    font-size: 12px;
+    font-size: 1.2rem;
+    color: $greyMidnight;
+
+    a {
+      color: #010101;
+      &:visited {
+        color: #010101;
+      }
+    }
+
+    & > span {
+      display: table;
+      text-align: center;
+      width: 100%;
+
+      a {
+        display: table-cell;
+        vertical-align: center;
+      }
+    }
+
+    img {
+      max-height: 60px;
+      max-width: 190px;
+    }
+  }
+}
+
+hr {
+  border: 1px solid grey;
+  clear: both;
+  margin: 16px 0 18px;
+  height: 0;
+}
+
+abbr, acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #222;
+  border-bottom: 1px solid grey;
+  cursor: help;
+}
+
+abbr {
+  text-transform: none;
+}
+
+.highlight-primary {
+  color: $custom-primary;
+  font: {
+    style: inherit;
+    weight: inherit;
+  };
+}
+
+.highlight-secondary {
+  color: $custom-secondary;
+  font: {
+    style: inherit;
+    weight: inherit;
+  };
+}
+
+/**
+   * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+ */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  /* Black prints faster: sanbeiji.com/archives/953 */
+  p a {
+    color: grey !important;
+    text-decoration: underline;
+    &:visited {
+      color: grey !important;
+      text-decoration: underline;
+    }
+    &[href]:after {
+      content: " (" attr(href) ")";
+    }
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after {
+    content: "";
+  }
+  a {
+    &[href^="javascript:"]:after, &[href^="#"]:after {
+      content: "";
+    }
+  }
+  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img {
+    page-break-inside: avoid;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

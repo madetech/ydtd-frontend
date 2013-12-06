@@ -1,0 +1,19 @@
+html {
+  background: $greyLight;
+}
+
+body {
+  @include font-rendering-fix;
+}
+
+body * {
+  @include box-sizing(border-box);
+}
+
+.full-height {
+  min-height: 100%;
+}
+
+.no-mobile {
+  @include hidden(all-phones);
+}
