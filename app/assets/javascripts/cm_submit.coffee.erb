@@ -4,7 +4,7 @@ window.CampaignMonitorSubmit = class CampaignMonitorSubmit
       @init()
 
   init: ->
-    return if $('form[action*="http://madebymade.createsend.com"]').length < 1
+    return if $('form[action*="email.yourdaytheirday.com"]').length < 1
     @attach form for form in $('form[action*="email.yourdaytheirday.com"]')
 
   addErrorHtml: (form) ->
@@ -18,16 +18,16 @@ window.CampaignMonitorSubmit = class CampaignMonitorSubmit
       url = $elem.attr('action')
 
       if $(form).find('input[type="email"]').val().length < 1
-        @showError form, "<%= t('form.error_no_email') %>"
+        @showError form, "<%= I18n.t('form.error_no_email') %>"
         return
 
       $elem.find('button').prop('disabled', true);
       $.getJSON "#{url}?callback=?", $elem.serialize(), (data) =>
         if data.Status is 400
           $elem.find('button').prop('disabled', false);
-          @showError form, "<%= t('form.signup_error') %>"
+          @showError form, "<%= I18n.t('form.signup_error') %>"
         else # 200
-          @showSuccess form, "<%= t('form.signup_success') %>"
+          @showSuccess form, "<%= I18n.t('form.signup_success') %>"
           @sendTracking(form) if typeof(ga) isnt 'undefined'
 
 
