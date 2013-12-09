@@ -78,3 +78,21 @@
     }
   }
 }
+
+.marketing--footer[data-info-links="off"] {
+  & > div {
+    & > div {
+      width: 100%;
+    }
+
+    .ydtd-logo {
+      margin: 0 auto 20px;
+    }
+
+    small {
+      display: block;
+      padding: 0 5%;
+      text-align: center;
+    }
+  }
+}

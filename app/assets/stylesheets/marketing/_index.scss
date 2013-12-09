@@ -56,13 +56,23 @@
     margin: 60px auto 0;
 
     @include respond(all-phones) {
-      display: none;
+      font: {
+        size: 24px;
+      }
+      letter-spacing: -1px;
+      line-height: 26px;
+      margin-top: 27px;
+      padding: 0 5%;
     }
   }
 
   p {
     margin: 27px auto 0;
     padding: 0 30px;
+
+    @include respond(all-phones) {
+      display: none;
+    }
   }
 
   .header--signup {
@@ -171,16 +181,22 @@
 
     @include respond(all-phones){
       @include font-size($norm);
-      line-height: $norm+1;
-      padding-left: 90px;
+      line-height: 75px;
+      padding: 0 0 0 90px;
       text-align: left;
+
+      span {
+        @include inline-block;
+        line-height: $norm+1;
+        vertical-align: middle;
+      }
     }
   }
 
   p {
     @include font-size($norm);
     font-weight: $font-weight-regular;
-    line-height: normal;
+    line-height: 20px;
     margin-top: 5px;
     text-align: center;
 
@@ -190,9 +206,7 @@
     }
 
     @include respond(all-phones){
-      @include font-size($small);
-      padding-left: 90px;
-      text-align: left;
+      display: none;
     }
   }
 }
@@ -214,6 +228,7 @@
 
 .marketing--full-signup {
   @include respond(all-phones) {
+    background: $custom-secondary !important;
     padding: 0;
   }
 
@@ -229,6 +244,14 @@
       top: 0;
     };
     padding: 0;
+
+    @include respond(all-phones) {
+      @include font-size($large+1);
+      letter-spacing: -1px;
+      line-height: $large + 4;
+      margin: 27px 0;
+      padding: 0 5%;
+    }
   }
 
   & > div {
