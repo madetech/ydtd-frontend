@@ -5,7 +5,7 @@ window.CampaignMonitorSubmit = class CampaignMonitorSubmit
 
   init: ->
     return if $('form[action*="http://madebymade.createsend.com"]').length < 1
-    @attach form for form in $('form[action*="http://madebymade.createsend.com"]')
+    @attach form for form in $('form[action*="email.yourdaytheirday.com"]')
 
   addErrorHtml: (form) ->
     $(form).prepend('<p class="error-message" />')
