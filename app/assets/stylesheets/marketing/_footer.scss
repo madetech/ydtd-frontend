@@ -34,7 +34,7 @@
 
       a {
         color: $greyMidnight;
-        text-decoration: none;
+        text-decoration: underline;
       }
 
       @include respond(all-phones) {
