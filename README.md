@@ -1,4 +1,6 @@
-Frontend components for YDTD (yourdaytheirday.com). A mixture of Coffeescript, SASS and HTML partials which are used within the main application. Created using middleman, imported into Rails as a gem.
+YDTD Frontend Components
+-------
+Frontend components for [YDTD](yourdaytheirday.com). A mixture of Coffeescript, SASS and HTML partials which are used within the main application. Created using middleman, imported into Rails as a gem.
 
 [![Build Status](https://travis-ci.org/madebymade/ydtd-frontend.png?branch=master)](https://travis-ci.org/madebymade/ydtd-frontend)
 
