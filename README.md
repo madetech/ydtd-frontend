@@ -14,11 +14,9 @@ YDTD Frontend is developed and maintained by [Made by Made](http://www.madebymad
 
 Thanks to the contributors:
 
-[Rory MacDonald](https://github.com/RoryMacDonald)
-
-[Seb Ashton](https://github.com/SebAshton)
-
-[Scott Mason](https://github.com/sowasred2012)
+*[Rory MacDonald](https://github.com/RoryMacDonald)
+*[Seb Ashton](https://github.com/SebAshton)
+*[Scott Mason](https://github.com/sowasred2012)
 
 License
 -------
