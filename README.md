@@ -10,9 +10,9 @@ bundle exec middleman -p 5000
 
 Credits
 -------
+[![made](https://s3-eu-west-1.amazonaws.com/made-assets/googleapps/google-apps.png)](http://www.madebymade.co.uk/)
 
-
-Developed and maintained by [![made](https://s3-eu-west-1.amazonaws.com/made-assets/googleapps/google-apps.png)](http://www.madebymade.co.uk/).
+Developed and maintained by [Made](http://www.madebymade.co.uk).
 
 *   [Rory MacDonald](https://github.com/RoryMacDonald)
 *   [Seb Ashton](https://github.com/SebAshton)
