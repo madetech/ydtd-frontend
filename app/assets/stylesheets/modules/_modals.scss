@@ -29,7 +29,9 @@
 
   h1 {
     color: $custom-header;
+    font-weight: $font-weight-regular;
     margin: 0;
+    text-align: left;
   }
 
   .modal--content {
