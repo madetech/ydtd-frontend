@@ -1,0 +1,39 @@
+.page-nav {
+    @include column(3);
+    float: left;
+    margin-left: 0;
+
+    @include respond(all-phones) {
+      float: none;
+      width: 100%;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      @include respond(all-phones) {
+        text-align: center;
+      }
+    }
+
+    li {
+      padding: 0;
+
+      @include respond(all-phones) {
+        @include inline-block;
+        padding: 0 5px;
+      }
+    }
+
+    a {
+      font-family: $font-family;
+      @include font-size($small);
+      font-weight: $font-weight-regular;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
