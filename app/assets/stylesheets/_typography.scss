@@ -1,13 +1,13 @@
 h1,h2,h3,h4,h5,h6 {
   font-family: $font-family;
   font-weight: $header-font-weight;
-  color: grey;
+  color: black;
   text-rendering: optimizeLegibility;
   @include padding-leader($rhythm-spacing);
   @include adjust-leading-to($rhythm-height);
   @include padding-trailer($rhythm-spacing);
   a {
-    color: grey;
+    color: black;
   }
 }
 
@@ -16,6 +16,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
+  letter-spacing: -1px;
   @include font-size($xxlarge);
   &.larger {
     @include font-size($xlarge);
