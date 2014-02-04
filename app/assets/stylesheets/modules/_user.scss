@@ -1,6 +1,5 @@
 .user--avatar {
   border: 3px solid $white;
-  @include border-radius(62px);
   @include box-shadow(0 3px 3px rgba(darken($custom-secondary, 30%), 0.2));
   display: block;
   height: 162px;
@@ -13,7 +12,16 @@
 
 .user--avatar-small {
   border-width: 2px;
+  @include border-radius(62px);
   @extend .user--avatar;
   height: 62px;
   width: 62px;
+}
+
+.user--avatar-large {
+  border-width: 3px;
+  @include border-radius(167px);
+  @extend .user--avatar;
+  height: 167px;
+  width: 167px;
 }
