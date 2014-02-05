@@ -1,25 +1,35 @@
 .user--profile {
   background-color: $white;
+  @include box-shadow($box-shadow-large);
   font-family: $font-family;
+  overflow: auto;
   width: 100%;
-
-  .user--profile-sidebar,
-  .user--profile-content {
-    @include inline-block(top);
-  }
 
   .user--profile-sidebar {
     background-color: $greyDarkest;
-    width: 220px;
+    float: left;
+    width: 21.5%;
+
+    @include respond(all-phones) {
+      width: 100%;
+    }
   }
 
   .user--profile-avatar {
-    padding: 20px 25px 10px;
+    padding: 20px 25px 6px;
+
+    @include respond(all-phones) {
+      text-align: center;
+    }
 
     .user--profile-name,
     .user--profile-role,
     .user--profile-status-note {
       color: $white;
+
+      @include respond(all-phones) {
+        text-align: center;
+      }
     }
 
     .user--profile-name,
@@ -44,14 +54,23 @@
       text-transform: uppercase;
     }
 
-    .user--avatar-large {
+    .user--avatar-full-width {
       margin: 0 auto 10px;
+
+      @include respond(all-phones) {
+        display: none;
+      }
     }
   }
 
   .user--profile-tabs {
     color: $white;
     list-style-type: none;
+    margin: {
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
     padding: 0;
 
     li {
@@ -64,7 +83,20 @@
       color: $white;
       display: block;
       font-size: $med;
-      padding: 17px 25px;
+      padding: 16px 25px 18px;
+
+      i {
+        color: $greyDarkest;
+        margin-right: 16px;
+
+        @include respond(all-phones) {
+          display: none;
+        }
+      }
+
+      @include respond(all-phones) {
+        text-align: center;
+      }
 
       &:hover {
         background-color: $custom-primary;
@@ -74,34 +106,97 @@
         background-color: $white;
         color: $custom-primary;
         font-weight: $font-weight-bold;
+
+        i {
+          color: $custom-primary;
+        }
       }
     }
   }
 
   .user--profile-content {
-    width: 790px;
+    float: right;
+    width: 78.5%;
+
+    @include respond(all-phones) {
+      width: 100%;
+    }
 
     .content-tabs {
+      background-color: $greyLighter;
       border: {
         bottom: 1px solid $greyDarker;
         top: 1px solid $greyDarker;
       }
       margin: 0;
+      overflow: auto;
       padding: 0;
 
       li {
         border-right: 1px solid $greyDarker;
-        @include inline-block;
+        float: left;
+        padding-bottom: 0;
 
-         a {
+        @include respond(all-phones) {
+          border-right: 0;
+          border-top: 1px solid $greyDarker;
+          width: 100%;
+        }
+
+        a {
           color: $greyMidnight;
           display: block;
           font: {
             size: $norm;
             weight: $font-weight-bold;
           }
-          padding: 12px 42px;
-         }
+          padding: {
+            bottom: 14px;
+            top: 14px;
+          }
+          text-align: center;
+          width: 160px;
+
+          @include respond(all-phones) {
+            width: 100%;
+          }
+
+          &:hover {
+            background-color: $custom-secondary;
+            color: $white;
+          }
+
+          &.active {
+            color: $greyMidnight;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    .content-body {
+      color: $greyDusk;
+      font: {
+        size: $xxxlarge;
+        weight: $font-weight-regular;
+      }
+      line-height: 43px;
+      padding: 26px 50px;
+
+      @include respond(all-phones) {
+        font-size: $med;
+        line-height: 18px;
+        padding: 26px 20px;
+      }
+
+      a {
+        border-bottom: 1px solid $custom-primary;
+        color: $custom-primary;
+
+        &:hover {
+          border-bottom: 1px solid $custom-secondary;
+          color: $custom-secondary;
+        }
       }
     }
   }
