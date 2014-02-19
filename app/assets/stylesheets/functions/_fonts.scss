@@ -1,5 +1,5 @@
 @mixin font-size($size, $is-important: false) {
-  $size: if(unitless($size), $size, $size / 1px);
+  $size: if(unit($size) == "px", $size / 1px, $size);
 
   @if $is-important {
     font-size: $size + px !important;
