@@ -101,11 +101,9 @@ label {
   }
 }
 
-input {
-  -webkit-appearance: none;
-  -moz-appearance:    none;
-  appearance:         none;
 input, textarea {
+  @include appearance(none);
+
   @include placeholder {
     color: $greyDarkest;
     font-family: inherit;
@@ -119,25 +117,23 @@ input, textarea {
   &[type=email],
   &[type=text],
   &[type=password] {
-    background-color: #fff;
-    border: 1px solid $grey;
-
-    &:focus,
-    &:hover {
-      border-color: #000;
-    }
-  }
-
-  &[type=email],
-  &[type=text],
-  &[type=password] {
-    @include border-radius(3px);
+    width: 100%;
+    
     margin: {
       bottom: 10px;
       top: 10px;
     }
     padding: 0.65em 16px 0.64em;
-    width: 440px;
+    
+    background-color: #fff;
+    border: 1px solid $grey;
+    @include border-radius(3px);
+
+    &:focus,
+    &:hover {
+      border-color: $greyDarker;
+    }
+
 
     &.large {
       @include font-size($large);
@@ -146,18 +142,17 @@ input, textarea {
   }
 
   &.error {
+    border-color: $error;
+    background-color: tint($error, 75);
+
     &:before {
-      background-color: $error;
+      border-color: $error;
+      background-color: tint($error, 75);
     }
-  }
 
-  &[type=email],
-  &[type=text],
-  &[type=password] {
-    width: 100%;
-
-    &.error {
-      background-color: $error;
+    &:focus,
+    &:hover {
+      border-color: shade($error, 25);
     }
   }
 }
