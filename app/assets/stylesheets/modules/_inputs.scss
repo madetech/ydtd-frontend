@@ -126,10 +126,12 @@ input {
   -webkit-appearance: none;
   -moz-appearance:    none;
   appearance:         none;
+input, textarea {
   border: none;
   display: block;
   outline: none;
 
+  &:not([type]),
   &[type=email],
   &[type=text],
   &[type=password] {
