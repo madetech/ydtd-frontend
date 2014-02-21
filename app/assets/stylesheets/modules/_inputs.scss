@@ -1,24 +1,3 @@
-
-::-webkit-input-placeholder {
-  color: $greyDarkest;
-  font-family: inherit;
-}
-
-:-moz-placeholder {
-  color: $greyDarkest;
-  font-family: inherit;
-}
-
-::-moz-placeholder {
-  color: $greyDarkest;
-  font-family: inherit;
-}
-
-:-ms-input-placeholder {
-  color: $greyDarkest;
-  font-family: inherit;
-}
-
 form {
   font: {
     family: $font-family;
@@ -127,6 +106,11 @@ input {
   -moz-appearance:    none;
   appearance:         none;
 input, textarea {
+  @include placeholder {
+    color: $greyDarkest;
+    font-family: inherit;
+  }
+
   border: none;
   display: block;
   outline: none;
