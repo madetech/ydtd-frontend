@@ -1,3 +1,10 @@
+button {
+  &.submit {
+    @include inline-block;
+    float: right;
+  }
+}
+
 button,
 .button {
   @include background-image(linear-gradient(lighten($custom-primary, 10%) 38%, darken($custom-primary, 10%)));

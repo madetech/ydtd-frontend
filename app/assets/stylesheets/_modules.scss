@@ -1,6 +1,5 @@
 @import "modules/buttons";
-@import "modules/inputs";
-@import "modules/forms";
+@import "modules/forms/*";
 @import "modules/modals";
 @import "modules/search";
 @import "modules/charts";
@@ -10,3 +9,4 @@
 @import "modules/page";
 @import "modules/page_nav";
 @import "modules/profile";
+@import "modules/pagination";

@@ -1,3 +1,20 @@
+form {
+  font: {
+    family: $font-family;
+    weight: $font-weight-light;
+  }
+  text-align: left;
+
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+}
+
+label {
+  @include font-size($small);
+}
+
 %form--inline {
   @include clearfix;
 

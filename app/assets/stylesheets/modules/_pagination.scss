@@ -1,0 +1,48 @@
+.pagination-container {
+  background-color: $greyLightest;
+  font: {
+    family: $font-family;
+    weight: $font-weight-semibold;
+  }
+  @include font-size($norm);
+  padding: 50px 0;
+  text-align: center;
+
+  span {
+    &.current {
+      background-color: $custom-header;
+      border-radius: $border-radius;
+      color: #fff;
+      line-height: 21px;
+      min-height: 21px;
+      min-width: 21px;
+      @include inline-block;
+      padding: 0 6px;
+    }
+
+    a {
+      border-radius: $border-radius;
+      color: #000;
+      line-height: 21px;
+      min-height: 21px;
+      min-width: 21px;
+      @include inline-block;
+      padding: 0 6px;
+      text-align: center;
+
+      &:hover {
+        background-color: $custom-primary;
+        color: #fff;
+      }
+    }
+
+    &.first,
+    &.prev,
+    &.next,
+    &.last {
+      a {
+        font-weight: $font-weight-light;
+      }
+    }
+  }
+}
