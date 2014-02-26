@@ -13,6 +13,11 @@
   }
 }
 
+%input-disabled {
+  border-color: $greyDarker;
+  background-color: $grey;
+}
+
 .form-field {
   input, textarea {
     @include appearance(none);
@@ -52,6 +57,10 @@
 
       &.error {
         @extend %input-error;
+      }
+
+      &.disabled {
+        @extend %input-disabled;
       }
     }
   }
