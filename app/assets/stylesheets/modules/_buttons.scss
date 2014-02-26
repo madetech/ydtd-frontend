@@ -7,6 +7,8 @@ button {
 
 button,
 .button {
+  margin-top: 30px;
+
   @include background-image(linear-gradient(lighten($custom-primary, 10%) 38%, darken($custom-primary, 10%)));
   background-color: $custom-primary;
   border: $button-border solid adjust_hue(darken($custom-primary, 30%), 23);
