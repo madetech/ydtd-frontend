@@ -32,4 +32,7 @@ window.DatePickerView = class DatePickerView extends Uniform
     date_parts = el.value.split('/')
     return unless date_parts.length is 3
     date_parts.reverse()
-    @find(el).siblings('select').each (i) -> @value = parseInt(date_parts[i], 10)
+    $selects = @find(el).siblings('select')
+    $selects.each (i) -> @value = parseInt(date_parts[i], 10)
+    $selects.trigger('change')
+
