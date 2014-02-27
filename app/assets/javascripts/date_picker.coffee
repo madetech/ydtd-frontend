@@ -21,6 +21,10 @@ window.DatePickerView = class DatePickerView extends Uniform
         />
     """
 
+  pad_date = (str) ->
+    return '0' + str if str.length is 1
+    return str
+
   insert_date_input: ->
     @el.each ->
       $field = $(@)
@@ -28,7 +32,7 @@ window.DatePickerView = class DatePickerView extends Uniform
       $input.data($field.data())
       $selects = $field.find('select')
       $input.insertAfter($selects.last())
-      $input.val($selects.map(-> @value).get().reverse().join('/'))
+      $input.val($selects.map(-> pad_date(@value)).get().reverse().join('/'))
       $input.datepicker(format: 'dd/mm/yyyy')
       $input.siblings('label').attr('for', $input.attr('id'))
 
