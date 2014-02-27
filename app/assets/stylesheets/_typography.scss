@@ -7,9 +7,8 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
 
   margin: 0;
-  @include padding-leader($rhythm-spacing * 3);
+  padding: 0;
   @include adjust-leading-to($rhythm-height);
-  @include padding-trailer(0);
   
   a {
     color: black;
@@ -24,18 +23,50 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   @include font-size($xxlarge);
+  padding-top: $xxlarge;
 
-  &.larger  { @include font-size($xxxlarge)   }
-  &.xlarge  { @include font-size($reallybig)  }
-  &.xxlarge { @include font-size($tremendous) }
-  &.absurd  { @include font-size($absurd)     }
+  &.larger {
+    @include font-size($xxxlarge);
+    padding-top: $xxlarge;
+  }
+
+  &.xlarge {
+    @include font-size($reallybig);
+  }
+
+  &.xxlarge {
+    @include font-size($tremendous);
+  }
+
+  &.absurd {
+    @include font-size($absurd);
+  }
 }
 
-h2 { @include font-size($xlarge) }
-h3 { @include font-size($larger) }
-h4 { @include font-size($large) }
-h5 { @include font-size($med) }
-h6 { @include font-size($norm) }
+h2 {
+  @include font-size($xlarge);
+  padding-top: $xlarge;
+}
+
+h3 {
+  @include font-size($larger);
+  padding-top: $larger;
+}
+
+h4 {
+  @include font-size($large);
+  padding-top: $large;
+}
+
+h5 {
+  @include font-size($med);
+  padding-top: $med;
+}
+
+h6 {
+  @include font-size($norm);
+  padding-top: $norm;
+}
 
 @include respond(all-phones) {
   h1 { @include font-size($xlarge) }
