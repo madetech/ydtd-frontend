@@ -2,7 +2,7 @@ class YDTDInputs extends Uniform
   elements: (add) ->
     add('country_selectors', '#country, #country_alt')
     add('placeholders', '[placeholder]')
-    add('date_pickers', '.init-date-picker')
+    add('date_pickers', '.input-date')
 
   init: ->
     super

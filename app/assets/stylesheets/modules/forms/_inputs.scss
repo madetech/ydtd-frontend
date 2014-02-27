@@ -63,6 +63,16 @@
         @extend %input-disabled;
       }
     }
+
+    &.input-date {
+      width: 300px;
+    }
+
+    @include respond(300px) {
+      &.input-date {
+        width: 100%;
+      }
+    }
   }
 
   textarea {
@@ -72,5 +82,11 @@
   select, .select2-container {
     margin-top: 10px;
     width: 300px;
+  }
+
+  @include respond(300px) {
+    .select2-container {
+      width: 100%;
+    }
   }
 }
