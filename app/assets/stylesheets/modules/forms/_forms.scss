@@ -5,12 +5,12 @@ form {
     border: none;
     margin: 0;
     padding: 0;
-    @include padding-leader($rhythm-spacing * 4);
+    padding-top: $xxlarge;
   }
 }
 
 .form-field {
-  @include padding-leader($rhythm-spacing * 3);
+  padding-top: $xlarge;
 }
 
 .form-field > label {
