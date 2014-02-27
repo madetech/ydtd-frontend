@@ -2,7 +2,7 @@
 .radio-wrap {
   @include font-size($small);
 
-  & > label {
+  > label {
     margin-bottom: 10px;
   }
 
@@ -42,6 +42,17 @@
       &:checked + label:before {
         content: "";
       }
+    }
+  }
+
+  &.form-field-inline {
+    > label {
+      margin: 0;
+    }
+
+    span.checkbox,
+    span.radio {
+      line-height: 42px;
     }
   }
 
