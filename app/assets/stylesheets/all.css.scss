@@ -1,25 +1,18 @@
 @charset "UTF-8";
 
+// Vendor
 @import "normalize";
 @import "modular-scale";
 @import "compass";
 
-@import "vars/colours";
-@import "vars/custom";
-@import "vars/settings";
-
+// Application
+@import "vars";
 @import "mixins";
 @import "base";
-@import "layout";
 @import "typography";
+@import "layout";
 @import "modules";
+@import "shared";
 
-@import "shared/footer";
-@import "shared/icons";
-@import "shared/logos";
-@import "shared/pages-login";
-@import "shared/header";
-
+// Marketing
 @import "marketing_site";
-
-@import "select2";
