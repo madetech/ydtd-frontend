@@ -10,12 +10,24 @@ form {
 }
 
 .form-field {
+  max-width: 800px;
   padding-top: $xlarge;
 }
 
 .form-field > label {
   display: block;
   @include font-size($small);
+}
+
+@include respond(desktop) {
+  .form-field-inline {
+    > label {
+      float: left;
+      width: 22%;
+      max-width: 200px;
+      line-height: 42px;
+    }
+  }
 }
 
 %form--inline {

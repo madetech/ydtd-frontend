@@ -64,7 +64,7 @@
       }
     }
 
-    &.input-date {
+    &.input-date, &.input-small {
       width: 300px;
     }
 
@@ -84,9 +84,30 @@
     width: 300px;
   }
 
-  @include respond(300px) {
+  @include respond("max-width: 300px") {
     .select2-container {
       width: 100%;
+    }
+  }
+}
+
+@include respond(desktop) {
+  .form-field-inline {
+    overflow: hidden;
+
+    input, textarea {
+      &:not([type]),
+      &[type=email],
+      &[type=text],
+      &[type=password] {
+        margin-top: 0;
+        width: 78%;
+        float: left;
+      }
+
+      &.input-date, &.input-small {
+        width: 300px;
+      }
     }
   }
 }
