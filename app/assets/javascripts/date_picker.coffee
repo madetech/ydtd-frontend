@@ -24,6 +24,7 @@ window.DatePickerView = class DatePickerView extends Uniform
   insert_date_input: ->
     @el.each ->
       $input = date_input()
+      $input.data($(@).data())
       $input.appendTo(@)
       $selects = $input.siblings('select')
       $input.val($selects.map(-> @value).get().reverse().join('/'))
