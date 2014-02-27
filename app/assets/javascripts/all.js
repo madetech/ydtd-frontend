@@ -5,4 +5,5 @@
 //= require_tree ./charts
 //= require lists
 //= require bootstrap-datepicker
+//= require date_picker
 //= require cm_submit

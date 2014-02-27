@@ -2,7 +2,7 @@ class YDTDInputs extends Uniform
   elements: (add) ->
     add('country_selectors', '#country, #country_alt')
     add('placeholders', '[placeholder]')
-    add('date_pickers', '.input-date')
+    add('date_pickers', '.form-field.date')
 
   init: ->
     super
@@ -26,7 +26,6 @@ class YDTDInputs extends Uniform
       placeholder: "#303030"
 
   attachDatePicker: ->
-    console.log(@date_pickers.length)
-    @date_pickers.datepicker();
+    new DatePickerView(el: @date_pickers)
 
 $ -> new YDTDInputs(el: $('form'))
