@@ -6,9 +6,10 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   color: black;
 
-  @include padding-leader($rhythm-spacing);
+  margin: 0;
+  @include padding-leader($rhythm-spacing * 3);
   @include adjust-leading-to($rhythm-height);
-  @include padding-trailer($rhythm-spacing);
+  @include padding-trailer(0);
   
   a {
     color: black;

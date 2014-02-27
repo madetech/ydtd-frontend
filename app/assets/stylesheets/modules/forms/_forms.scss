@@ -3,12 +3,14 @@ form {
 
   fieldset {
     border: none;
+    margin: 0;
     padding: 0;
+    @include padding-leader($rhythm-spacing * 4);
   }
 }
 
 .form-field {
-  margin-top: 30px;
+  @include padding-leader($rhythm-spacing * 3);
 }
 
 .form-field > label {
