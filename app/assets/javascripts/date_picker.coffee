@@ -39,9 +39,13 @@ window.DatePickerView = class DatePickerView extends Uniform
 
   update_select_values: (el) ->
     date_parts = el.value.split('/')
-    return unless date_parts.length is 3
-    date_parts.reverse()
     $selects = @find(el).siblings('select')
-    $selects.each (i) -> @value = parseInt(date_parts[i], 10)
+
+    if date_parts.length is 3
+      date_parts.reverse()
+      $selects.each (i) -> @value = parseInt(date_parts[i], 10)
+    else
+      $selects.each (i) -> @value = ''
+
     $selects.trigger('change')
 
