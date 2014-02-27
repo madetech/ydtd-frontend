@@ -11,7 +11,7 @@ form {
 
 .form-field {
   max-width: 800px;
-  padding-top: $xlarge;
+  padding-top: $xxlarge;
 }
 
 .form-field > label {
@@ -19,13 +19,24 @@ form {
   @include font-size($small);
 }
 
+.input-error-message {
+  display: block;
+  @include font-size($small);
+  color: $error;
+  clear: left;
+  padding-top: $small;
+}
+
 @include respond(desktop) {
   .form-field-inline {
     > label {
       float: left;
       width: 22%;
-      max-width: 200px;
       line-height: 42px;
+    }
+
+    .input-error-message {
+      margin-left: 22%;
     }
   }
 }

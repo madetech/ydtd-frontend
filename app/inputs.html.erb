@@ -31,7 +31,7 @@ title: Form inputs
   <fieldset>
     <h2>Checkboxes</h2>
 
-    <div class="form-field checkbox-wrap">
+    <div class="form-field checkbox-wrap form-field-error">
       <label>A selection</label>
 
       <span class="checkbox">
@@ -45,8 +45,12 @@ title: Form inputs
       </span>
 
       <span class="checkbox">
-        <input type="checkbox" id="checkbox3" name="ydtd-checkbox" value="error" class="error" />
+        <input type="checkbox" id="checkbox3" name="ydtd-checkbox" value="error" />
         <label for="checkbox3">This</label>
+      </span>
+
+      <span class="input-error-message">
+        Please select one or more options
       </span>
     </div>
   </fieldset>
@@ -59,9 +63,14 @@ title: Form inputs
       <input type="text" id="first-name" name="first-name" />
     </div>
 
-    <div class="form-field">
+    <div class="form-field form-field-error">
       <label for="surname">Surname</label>
-      <input type="text" id="surname" name="surname" class="error" />
+
+      <input type="text" id="surname" name="surname" />
+
+      <span class="input-error-message">
+        Please enter your surname
+      </span>
     </div>
 
     <div class="form-field">
@@ -189,7 +198,7 @@ title: Form inputs
       </select>
     </div>
 
-    <div class="form-field date form-field-inline">
+    <div class="form-field date form-field-inline form-field-error">
       <label for="date">Another date</label>
 
       <select class="date required">
@@ -254,6 +263,10 @@ title: Form inputs
         <option value="30">30</option>
         <option value="31">31</option>
       </select>
+
+      <span class="input-error-message">
+        Please select another date
+      </span>
     </div>
   </fieldset>
 </form>

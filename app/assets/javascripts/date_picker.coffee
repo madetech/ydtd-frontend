@@ -23,10 +23,11 @@ window.DatePickerView = class DatePickerView extends Uniform
 
   insert_date_input: ->
     @el.each ->
+      $field = $(@)
       $input = date_input()
-      $input.data($(@).data())
-      $input.appendTo(@)
-      $selects = $input.siblings('select')
+      $input.data($field.data())
+      $selects = $field.find('select')
+      $input.insertAfter($selects.last())
       $input.val($selects.map(-> @value).get().reverse().join('/'))
       $input.datepicker(format: 'dd/mm/yyyy')
       $input.siblings('label').attr('for', $input.attr('id'))

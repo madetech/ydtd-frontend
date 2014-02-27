@@ -37,7 +37,7 @@
     &[type=password] {
       width: 100%;
       
-      margin-top: 10px;
+      margin-top: $small;
       padding: 0.65em 16px 0.64em;
       
       background-color: #fff;
@@ -49,14 +49,9 @@
         border-color: $greyDarker;
       }
 
-
       &.large {
         @include font-size($large);
         padding: 18px;
-      }
-
-      &.error {
-        @extend %input-error;
       }
 
       &.disabled {
@@ -89,7 +84,19 @@
       width: 100%;
     }
   }
+
+  &.form-field-error {
+    input, textarea, select {
+      &:not([type]),
+      &[type=email],
+      &[type=text],
+      &[type=password] {
+        @extend %input-error;
+      }
+    }
+  }
 }
+
 
 @include respond(desktop) {
   .form-field-inline {

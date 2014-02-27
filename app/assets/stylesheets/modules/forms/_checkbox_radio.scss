@@ -42,8 +42,13 @@
       &:checked + label:before {
         content: "";
       }
+    }
+  }
 
-      &.error + label:before {
+  &.form-field-error {
+    span.checkbox,
+    span.radio {
+      input + label:before {
         @extend %input-error;
       }
     }
