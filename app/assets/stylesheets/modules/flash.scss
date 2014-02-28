@@ -1,0 +1,27 @@
+.flash {
+  padding-top: $norm;
+
+  p {
+    padding: $norm;
+    border: 1px solid;
+    @include border-radius(3px);
+  }
+
+  &.flash-info p {
+    border-color: $greyDarker;
+    color: shade($greyDarker, 50);
+    background-color: $grey;
+  }
+
+  &.flash-success p {
+    border-color: $green;
+    color: shade($green, 50);
+    background-color: tint($green, 75);
+  }
+
+  &.flash-error p {
+    border-color: $error;
+    color: shade($error, 50);
+    background-color: tint($error, 75);
+  }
+}
