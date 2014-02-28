@@ -13,6 +13,7 @@ page "/", :layout => "application"
 page "/tabbed_lists.html", :layout => "application"
 page "/tabbed_lists_2.html", :layout => "application"
 page "/profile.html", :layout => "application"
+page "/email.html", :layout => "user_mailer"
 
 page "/marketing/"
 

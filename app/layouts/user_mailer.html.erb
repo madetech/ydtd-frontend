@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style type="text/css">
+    #outlook a {padding:0;}
+    body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+    .ExternalClass {width:100%;}
+    .ExternalClass,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {line-height: 100%;}
+    #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+    table td {border-collapse: collapse;}
+    img {display:block;}
+ 
+    @media only screen and (max-width: 550px) {
+      body[yahoo] #email-text-content {
+        width: 100% !important;
+      }
+    }
+
+    @media only screen and (max-width: 650px) {
+      body[yahoo] #email-content {
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        width: 100% !important;
+      }
+ 
+      body[yahoo] .full-width-mobile {
+        width: 100% !important;
+      }
+ 
+      body[yahoo] .block-on-mobile {
+        display: block !important;
+      }
+ 
+      body[yahoo] .no-mobile {
+        display: none !important;
+      }
+ 
+      body[yahoo] .mb-40-mobile {
+        margin-bottom: 40px !important;
+      }
+ 
+      body[yahoo] .product-image {
+        height: auto !important;
+        width: 50px !important;
+      }
+    }
+  </style>
+ 
+  <!-- Targeting Windows Mobile -->
+  <!--[if IEMobile 7]>
+  <style type="text/css">
+  </style>
+  <![endif]-->
+ 
+  <!--[if gte mso 9]>
+    <style>
+    </style>
+  <![endif]-->
+</head>
+<body yahoo="fix" bgcolor="#e4e4e4">
+  <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
+    <tr class="no-mobile">
+      <td>
+        <%= image_tag "email/spacer.gif", :alt => " ", :height =>"20", :width => "20", :style => "display:block;", :class => "image_fix" %>
+      </td>
+    </tr>
+
+    <tr>
+      <td valign="top">
+        <table id="email-content" bgcolor="#ffffff" style="border: 1px solid #999999; width: 650px;" cellpadding="0" cellspacing="0" border="0" align="center">
+          <tr>
+            <td height="100px">
+              <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                  <td width="20">
+                    <%= image_tag "email/spacer.gif", :alt => " ", :height =>"20", :width => "20", :style => "display:block;", :class => "image_fix" %>
+                  </td>
+
+                  <td>
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%" height="100px;">
+                      <tr>
+                        <td align="left" style="font-family: 'Gotham SSm A', 'Gotham SSm B', 'Helvetica', Helvetica, Arial, sans-serif; line-height: 1.5; font-size: 24px; font-weight: bold;" valign="bottom">
+                          <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td>
+                                <%= yield_content :strapline %>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td align="right" style="width: 170px" valign="bottom">
+                          
+                          <img src="http://placehold.it/170x62/00cdff/ffffff/" height="62" width="170" />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+
+                  <td width="20">
+                    <%= image_tag "email/spacer.gif", :alt => " ", :height =>"20", :width => "20", :style => "display:block;", :class => "image_fix" %>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+ 
+          <tr>
+            <td width="20" style="border-bottom: 1px solid #ccc">
+              <%= image_tag "email/spacer.gif", :alt => " ", :height =>"20", :width => "20", :style => "display:block;", :class => "image_fix" %>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="20">
+              <%= image_tag "email/spacer.gif", :alt => " ", :height =>"20", :width => "20", :style => "display:block;", :class => "image_fix" %>
+            </td>
+          </tr>
+ 
+          <tr>
+            <td>
+              <table id="email-text-content" style="width: 550px;" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td>
+                    <%= image_tag "email/spacer.gif", :alt => " ", :height =>"20", :width => "20", :style => "display:block;", :class => "image_fix" %>
+                  </td>
+
+                  <td>
+                    <%= yield %>
+
+                    <div style="font-family: 'Gotham SSm A', 'Gotham SSm B', 'Helvetica', Helvetica, Arial, sans-serif; line-height: 1.5; font-size: 14px;">
+                      Best,<br />
+                      The YDTD Team
+                    </div>
+                  </td>
+
+                  <td>
+                    <%= image_tag "email/spacer.gif", :alt => " ", :height =>"20", :width => "20", :style => "display:block;", :class => "image_fix" %>
+                  </td>
+                </tr>
+              </table>
+            </tr>
+          </tr>
+ 
+          <tr>
+            <td width="60">
+              <%= image_tag "email/spacer.gif", :alt => " ", :height =>"60", :width => "60", :style => "display:block;", :class => "image_fix" %>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="10">
+        <%= image_tag "email/spacer.gif", :alt => " ", :height =>"10", :width => "10", :style => "display:block;", :class => "image_fix" %>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center">
+        <div style="font-family: 'Gotham SSm A', 'Gotham SSm B', 'Helvetica', Helvetica, Arial, sans-serif; line-height: 1.5; font-size: 11px; color: #444">
+          YDTD is powered by
+          <a href="http://madetech.co.uk" style="color: #000">Made Technology</a>
+          <br />
+          Unit 309 /10, 30 Great Guildford Street, London, UK &bull;
+          <a href="mailto:info@madetech.co.uk" style="color: #00669f">info@madetech.co.uk</a>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= image_tag "email/spacer.gif", :alt => " ", :height =>"20", :width => "20", :style => "display:block;", :class => "image_fix" %>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
