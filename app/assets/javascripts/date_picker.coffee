@@ -48,4 +48,3 @@ window.DatePickerView = class DatePickerView extends Uniform
       $selects.each (i) -> @value = ''
 
     $selects.trigger('change')
-
