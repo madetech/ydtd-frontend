@@ -1,5 +1,12 @@
 module YdtdFrontend
   module MailerHelper
+    def spacer(width, height)
+      image_tag "email/spacer.gif", :alt => " ",
+                                    :height => width,
+                                    :width => height,
+                                    :style => "display:block;"
+    end
+
     def para(&block)
       wrap_erb('font-size: 14px;', &block)
     end
