@@ -1,5 +1,5 @@
 module YdtdFrontend
-  module UserMailerHelper
+  module MailerHelper
     def para(&block)
       wrap_erb('font-size: 14px;', &block)
     end

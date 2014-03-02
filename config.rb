@@ -1,6 +1,6 @@
-require 'app/helpers/ydtd_frontend/user_mailer_helper'
+require 'app/helpers/ydtd_frontend/mailer_helper'
 
-helpers YdtdFrontend::UserMailerHelper
+helpers YdtdFrontend::MailerHelper
 
 after_configuration do
   sprockets.append_path "#{root}/vendor/assets/javascripts"
