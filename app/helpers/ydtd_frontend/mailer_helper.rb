@@ -17,7 +17,7 @@ module YdtdFrontend
     end
 
     def call_to_action(link, text)
-      "<a href=\"#{link}\" style=\"#{big_bold_font} line-height: 50px; display: block; color: #ffffff; background: #00cdff; border-radius: 5px; text-align: center;\">#{text}</a><br /><br />"
+      "<a href=\"#{link}\" style=\"#{big_bold_font} line-height: 50px; display: block; color: #ffffff; background: #00cdff; border-radius: 5px; text-align: center;\">#{text}</a><br /><br />".html_safe
     end
 
     private
@@ -35,7 +35,7 @@ module YdtdFrontend
     end
 
     def wrap_erb(style, &block)
-      concat(wrap(capture(&block), style))
+      concat(wrap(capture(&block), style).html_safe)
     end
   end
 end
