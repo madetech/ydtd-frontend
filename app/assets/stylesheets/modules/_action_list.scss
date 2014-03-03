@@ -1,0 +1,55 @@
+.action-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    overflow: hidden;
+    line-height: 28px;
+    border-bottom: 1px solid #ccc;
+    padding: 11px $norm;
+    color: #333;
+  }
+
+  a {
+    font-weight: bold;
+    text-decoration: underline;
+    color: $custom-secondary;
+  }
+
+  .action-list--title {
+    margin-top: $norm;
+    border: 1px solid #999;
+    background: #fff;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px #ccc;
+  }
+
+  .action-list--title--quiet {
+    background: #999;
+    color: #fff;
+  }
+
+  .action-list--item--empty {
+    font-style: italic;
+  }
+
+  .action-list--button-collection {
+    float: right;
+    margin-top: $norm;
+
+    form {
+      display: inline-block;
+      padding-left: $xxsmall;
+    }
+
+    .button {
+      margin: 0;
+    }
+  }
+
+  @include respond(desktop) {
+    .action-list--button-collection {
+      margin-top: -2px;
+    }
+  }
+}
