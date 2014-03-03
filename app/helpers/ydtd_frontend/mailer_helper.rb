@@ -31,7 +31,7 @@ module YdtdFrontend
     end
 
     def wrap(content, style)
-      "<div style=\"#{font_family} line-height: 1.5; #{style}\">#{content}</div><br /><br />"
+      "<div style=\"#{font_family} line-height: 1.5; color: #333333; #{style}\">#{content}</div><br /><br />"
     end
 
     def wrap_erb(style, &block)
