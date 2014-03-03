@@ -12,6 +12,10 @@ form {
 .form-field {
   max-width: 800px;
   padding-top: $xxlarge;
+
+  &.hidden {
+    padding: 0;
+  }
 }
 
 .form-field > label {
