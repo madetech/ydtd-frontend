@@ -1,6 +1,6 @@
 .action-list {
   margin: 0;
-  padding: 0;
+  padding: $norm 0 0 0;
 
   li {
     overflow: hidden;
@@ -44,6 +44,12 @@
 
     .button {
       margin: 0;
+    }
+
+    a.button {
+      color: #fff;
+      text-decoration: none;
+      line-height: 1;
     }
   }
 
