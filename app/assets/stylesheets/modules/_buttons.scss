@@ -50,7 +50,7 @@ button,
   }
 }
 
-button.button-primary {
+.button-primary {
   @extend .button;
   @include background-image(linear-gradient(lighten($custom-secondary, 10%) 38%, darken($custom-secondary, 10%)));
   background-color: $custom-secondary;
@@ -65,7 +65,7 @@ button.button-primary {
   }
 }
 
-button.button-secondary {
+.button-secondary {
   @extend .button;
   border: 1px solid adjust_hue(darken(#B3B3B3, 30%), 23);
   @include background-image(linear-gradient(lighten(#B3B3B3, 10%) 38%, darken(#B3B3B3, 10%)));
