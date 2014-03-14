@@ -50,6 +50,12 @@ button,
   }
 }
 
+a.button {
+  line-height: 1;
+  text-decoration: none;
+  color: #fff;
+}
+
 .button-primary {
   @extend .button;
   @include background-image(linear-gradient(lighten($custom-secondary, 10%) 38%, darken($custom-secondary, 10%)));

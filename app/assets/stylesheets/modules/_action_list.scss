@@ -45,12 +45,6 @@
     .button {
       margin: 0;
     }
-
-    a.button {
-      color: #fff;
-      text-decoration: none;
-      line-height: 1;
-    }
   }
 
   @include respond(desktop) {
