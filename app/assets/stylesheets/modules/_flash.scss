@@ -1,25 +1,31 @@
 .flash {
-  padding-top: $norm;
+  @extend p;
+  margin-top: $norm;
+  padding: $norm;
+  border: 1px solid;
+  @include border-radius(3px);
 
-  p {
-    padding: $norm;
-    border: 1px solid;
-    @include border-radius(3px);
+  form {
+    float: right;
   }
 
-  &.flash-info p {
+  input {
+    margin: -4px 0 0 0;
+  }
+
+  &.flash-info {
     border-color: $greyDarker;
     color: shade($greyDarker, 50);
     background-color: $grey;
   }
 
-  &.flash-success p {
+  &.flash-success {
     border-color: $green;
     color: shade($green, 50);
     background-color: tint($green, 75);
   }
 
-  &.flash-error p {
+  &.flash-error {
     border-color: $error;
     color: shade($error, 50);
     background-color: tint($error, 75);
