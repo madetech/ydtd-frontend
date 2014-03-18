@@ -59,6 +59,10 @@
       }
     }
 
+    &[type=file] {
+      font-size: $small;
+    }
+
     &.input-date, &.input-small {
       width: 300px;
     }

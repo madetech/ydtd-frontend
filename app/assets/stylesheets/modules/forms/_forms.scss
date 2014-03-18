@@ -42,6 +42,11 @@ form {
     .input-error-message {
       margin-left: 22%;
     }
+
+    &.file input {
+      float: left;
+      margin-top: 12px;
+    }
   }
 }
 
