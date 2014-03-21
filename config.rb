@@ -5,8 +5,10 @@ require 'modular-scale'
 require 'middleman-livereload'
 require 'middleman-minify-html'
 require 'app/helpers/ydtd_frontend/mailer_helper'
+require 'app/helpers/ydtd_frontend/colors_helper'
 
 helpers YdtdFrontend::MailerHelper
+helpers YdtdFrontend::ColorsHelper
 
 set :source, "app"
 set :css_dir, "assets/stylesheets"
