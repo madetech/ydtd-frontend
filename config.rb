@@ -1,3 +1,4 @@
+require 'modular-scale'
 require 'app/helpers/ydtd_frontend/mailer_helper'
 
 helpers YdtdFrontend::MailerHelper
