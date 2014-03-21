@@ -2,6 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 require "ydtd_frontend/version"
 
+
 Gem::Specification.new do |s|
   s.name        = "ydtd_frontend"
   s.version     = YdtdFrontend::VERSION
@@ -16,6 +17,9 @@ Gem::Specification.new do |s|
   s.add_dependency "modular-scale"
   s.add_dependency "oj", ">= 2.2.2"
   s.add_dependency "therubyracer", "0.12.0"
+  s.add_dependency "middleman", "3.1.5"
+  s.add_dependency "middleman-livereload", "3.1.0"
+  s.add_dependency "middleman-minify-html", "3.1.1"
 
   s.require_paths = ["lib", "app", "vendor"]
   s.files = Dir["{lib,app,vendor}/**/*"] + ["README.md"]
