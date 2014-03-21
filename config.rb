@@ -24,7 +24,7 @@ page "/email.html", :layout => :mail
 page "/marketing/"
 
 activate :livereload
-activate :i18n
+activate :i18n, :path => 'config/locales'
 
 configure :build do
   activate :asset_hash
