@@ -12,7 +12,8 @@ Gem::Specification.new do |s|
   s.summary     = "Frontend component for the YDTD application and marketing site."
   s.description = ""
 
-  s.add_dependency "sass", "3.1.21"
+  s.add_dependency "sass", "3.2.14"
+  s.add_dependency "compass", "0.12.3"
   s.add_dependency "modular-scale", "2.0.4"
   s.add_dependency "oj", "2.2.3"
   s.add_dependency "therubyracer", "0.12.0"
