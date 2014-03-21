@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.description = ""
 
   s.add_dependency "sass", "3.1.21"
-  s.add_dependency "modular-scale"
+  s.add_dependency "modular-scale", "2.0.4"
   s.add_dependency "oj", "2.2.3"
   s.add_dependency "therubyracer", "0.12.0"
   s.add_dependency "middleman", "3.1.5"
