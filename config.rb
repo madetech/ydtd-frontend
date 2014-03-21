@@ -1,4 +1,5 @@
 require 'modular-scale'
+require 'middleman-livereload'
 require 'app/helpers/ydtd_frontend/mailer_helper'
 
 helpers YdtdFrontend::MailerHelper
