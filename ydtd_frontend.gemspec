@@ -2,7 +2,6 @@ $:.push File.expand_path("../lib", __FILE__)
 
 require "ydtd_frontend/version"
 
-
 Gem::Specification.new do |s|
   s.name        = "ydtd_frontend"
   s.version     = YdtdFrontend::VERSION
