@@ -4,11 +4,19 @@ require 'bundler/setup'
 require 'modular-scale'
 require 'middleman-livereload'
 require 'middleman-minify-html'
+
 require 'app/helpers/ydtd_frontend/mailer_helper'
 require 'app/helpers/ydtd_frontend/colors_helper'
 
+module DefaultLogoHelper
+  def logo_url
+    'http://placehold.it/170x62/00cdff/ffffff/'
+  end
+end
+
 helpers YdtdFrontend::MailerHelper
 helpers YdtdFrontend::ColorsHelper
+helpers DefaultLogoHelper
 
 set :source, "app"
 set :css_dir, "assets/stylesheets"
