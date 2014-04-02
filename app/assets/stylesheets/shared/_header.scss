@@ -21,7 +21,7 @@
     @include column(3);
     display: table-cell;
     float: left;
-    height: 118px;
+    height: 126px;
     padding: {
       bottom: 28px;
       left: 25px;
@@ -51,7 +51,7 @@
     }
 
     @include respond(all-phones) {
-      height: 90px;
+      height: 98px;
       padding: 14px;
     }
   }
@@ -73,7 +73,7 @@
   }
 
   @include respond(landscape-phones) {
-    height: 90px;
+    height: 98px;
     width: 50%;
   }
 
@@ -93,11 +93,11 @@
     @include clearfix;
     border-bottom: 1px $grey solid;
     color: $greyMidnight;
-    height: 90px;
+    height: 98px;
     padding: 10px 17px 10px;
 
     @include respond(landscape-phones) {
-      min-height: 62px;
+      min-height: 70px;
       height: auto;
     }
 
@@ -160,10 +160,6 @@
     right: 17px;
     top: 10px;
 
-    img {
-      max-width: none;
-    }
-
     &:after {
       background: $custom-primary;
       @include border-radius(15px);
@@ -186,9 +182,23 @@
       background: $custom-secondary;
     }
 
+    @include respond(all-phones) {
+      img {
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
+
     @include respond("max-width: 499px") {
       top: 14px;
       right: 14px;
+      
+      img {
+        max-width: none;
+        max-height: none;
+        height: 68px;
+        width: 68px;
+      }
     }
   }
 }
@@ -197,11 +207,10 @@
   @include flushColumn(7);
   float: right;
 
-
   @include respond(tablets) {
     border-top: 1px solid $grey;
     clear: both;
-    width: 100%
+    width: 100%;
   }
 
 
@@ -211,7 +220,7 @@
 
   @include respond(all-phones) {
     clear: both;
-    width: 100%
+    width: 100%;
   }
 
   ul {
@@ -262,7 +271,7 @@
     };
     line-height: $norm;
     margin-top: 44px;
-    padding-bottom: 28px;
+    padding-bottom: 36px;
     position: relative;
     text-align: center;
     @include transition(all 0.2s ease-in-out);
@@ -272,8 +281,8 @@
     }
 
     @include respond(all-phones) {
-      height: 40px;
-      line-height: 40px;
+      height: $reallybig;
+      line-height: $reallybig;
       margin: 0;
       padding: 0;
     }
