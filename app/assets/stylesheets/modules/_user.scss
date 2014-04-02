@@ -12,7 +12,7 @@
 
 .user--avatar-small {
   border-width: 2px;
-  @include border-radius(62px);
+  @include border-radius(50%);
   @extend .user--avatar;
   height: 62px;
   width: 62px;
