@@ -1,0 +1,66 @@
+.vertical-tabs {
+  overflow: hidden;
+  background: $white;
+  @extend .modal;
+}
+
+.vertical-tabs-sidebar {
+  background: $greyDarkest;
+  color: $white;
+}
+
+.vertical-tabs-sidebar-content {
+  padding: $large $large 0 $large;
+}
+
+.vertical-tabs-sidebar-navigation {
+  margin: 0;
+  padding: $large 0 0 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    padding: $large;
+    background: $greyDusk;
+    color: $white;
+    margin-bottom: 1px;
+
+    &:hover, &:focus {
+      background: $greyDarker;
+    }
+  }
+
+  .vertical-tabs-sidebar-navigation-current a {
+    background: $white;
+    color: $custom-primary;
+    font-weight: bold;
+  }
+}
+
+.vertical-tabs-content {
+  box-sizing: border-box;
+  padding: $xxlarge $reallybig $xxlarge*2 $reallybig;
+}
+
+@include respond(desktop) {
+  .vertical-tabs-sidebar,
+  .vertical-tabs-content {
+    float: left;
+  }
+
+  .vertical-tabs-sidebar {
+    width: 30%;
+  }
+
+  .vertical-tabs-sidebar-navigation {
+    padding-bottom: $tremendous;
+  }
+
+  .vertical-tabs-content {
+    width: 70%;
+  }
+}
