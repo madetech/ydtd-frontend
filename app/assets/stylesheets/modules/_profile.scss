@@ -1,3 +1,21 @@
+.profile-summary {
+  font-weight: normal;
+  line-height: 1.5;
+
+  strong, a {
+    font-weight: normal;
+    color: $custom-primary;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover, &:focus {
+      color: $custom-secondary;
+    }
+  }
+}
+
 .user--profile {
   background-color: $white;
   @include box-shadow($box-shadow-large);
