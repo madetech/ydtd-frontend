@@ -3,11 +3,12 @@
 }
 
 .profile-badge-avatar {
+  @extend .user--avatar;
   @include border-radius(50%);
-  border: 3px solid $white;
-  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-width: 160px;
   margin: 0 auto;
-  display: block;
 }
 
 .profile-badge-name,
