@@ -10,12 +10,12 @@
 }
 
 .vertical-tabs-sidebar-content {
-  padding: $large $large 0 $large;
+  padding: $xxxlarge $xxxlarge 0 $xxxlarge;
 }
 
 .vertical-tabs-sidebar-navigation {
   margin: 0;
-  padding: $large 0 0 0;
+  padding: $xxxlarge 0 0 0;
 
   li {
     margin: 0;
@@ -24,7 +24,7 @@
 
   a {
     display: block;
-    padding: $large;
+    padding: $large $xxxlarge;
     background: $greyDusk;
     color: $white;
     margin-bottom: 1px;
@@ -43,7 +43,7 @@
 
 .vertical-tabs-content {
   box-sizing: border-box;
-  padding: $xxlarge $reallybig $xxlarge*2 $reallybig;
+  padding: 0 $xxxlarge $xxlarge $xxxlarge;
 }
 
 @include respond(desktop) {
@@ -62,5 +62,6 @@
 
   .vertical-tabs-content {
     width: 70%;
+    padding: $xxlarge $reallybig $xxlarge*2 $reallybig;
   }
 }
