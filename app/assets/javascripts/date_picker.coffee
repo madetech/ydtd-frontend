@@ -43,7 +43,7 @@ window.DatePickerView = class DatePickerView extends Uniform
 
     if date_parts.length is 3
       date_parts.reverse()
-      $selects.each (i) -> @value = parseInt(date_parts[i], 10)
+      $selects.each (i) -> $(@).val(parseInt(date_parts[i], 10))
     else
       $selects.each (i) -> @value = ''
 
