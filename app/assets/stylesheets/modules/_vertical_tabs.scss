@@ -39,6 +39,10 @@
     color: $custom-primary;
     font-weight: bold;
   }
+
+  &:first-child {
+    padding: 0;
+  }
 }
 
 .vertical-tabs-content {
