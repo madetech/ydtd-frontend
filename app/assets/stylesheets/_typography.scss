@@ -251,7 +251,8 @@ blockquote {
 }
 
 hr {
-  border: 1px solid grey;
+  border: none;
+  border-top: 1px solid $greyLighter;
   clear: both;
   margin: $xlarge 0 0 0;
   height: 0;
