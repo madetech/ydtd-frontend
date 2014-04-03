@@ -1,21 +1,10 @@
 .application--breadcrumb {
   background: $greyLight;
-  border: {
-    bottom: 1px solid $greyDarker;
-  };
-
-  ul {
-    margin: 0;
-    @include row;
-  }
-
-  li {
-    color: $greyDarkest;
-    font-family: $font-family;
-    @include font-size($small);
-    float: left;
-    margin: 15px 2px 13px 0;
-  }
+  border-bottom: 1px solid $greyDarker;
+  color: $greyDarkest;
+  font-family: $font-family;
+  @include font-size($small);
+  padding: 15px;
 
   a {
     border-bottom: 1px solid $greyDarkest;
