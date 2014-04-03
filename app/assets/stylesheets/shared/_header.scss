@@ -234,12 +234,16 @@
     padding: 0;
     width: 20%;
 
-    &:first-child a:before {
-      display: none;
-    }
+    &:first-child {
+      @include respond(desktop) {
+        &.active {
+          border-left: 1px solid $grey;
+        }
+      }
 
-    &.active a {
-      background: #fff;
+      a:before {
+        display: none;
+      }
     }
 
     &.active a,
@@ -252,6 +256,22 @@
       }
 
       @include respond(all-phones) {
+        padding-top: 0;
+      }
+    }
+
+    &.active a {
+      background: #fff;
+      border-top: 2px solid $grey;
+      padding-top: 42px;
+
+      @include respond(tablets) {
+        border-top: none;
+        padding-top: 28px;
+      }
+
+      @include respond(all-phones) {
+        border-top: none;
         padding-top: 0;
       }
     }
@@ -278,6 +298,7 @@
 
     @include respond(tablets) {
       margin-top: 28px;
+      padding-bottom: 28px;
     }
 
     @include respond(all-phones) {
