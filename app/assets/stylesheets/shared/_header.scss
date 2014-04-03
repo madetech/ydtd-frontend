@@ -160,27 +160,27 @@
     right: 17px;
     top: 10px;
 
-    &:after {
-      background: $custom-primary;
-      @include border-radius(15px);
-      content: attr(data-notification);
-      color: #fff;
-      display: inline-block;
-      font-family: $font-family;
-      font-weight: $font-weight-bold;
-      font-size: $xsmall;
-      height: 15px;
-      line-height: 15px;
-      min-width: 15px;
-      position: absolute;
-      right: 0;
-      text-align: center;
-      top: 2px;
-    }
+    // &:after {
+    //   background: $custom-primary;
+    //   @include border-radius(15px);
+    //   content: attr(data-notification);
+    //   color: #fff;
+    //   display: inline-block;
+    //   font-family: $font-family;
+    //   font-weight: $font-weight-bold;
+    //   font-size: $xsmall;
+    //   height: 15px;
+    //   line-height: 15px;
+    //   min-width: 15px;
+    //   position: absolute;
+    //   right: 0;
+    //   text-align: center;
+    //   top: 2px;
+    // }
 
-    &:hover:after  {
-      background: $custom-secondary;
-    }
+    // &:hover:after  {
+    //   background: $custom-secondary;
+    // }
 
     @include respond(all-phones) {
       img {
