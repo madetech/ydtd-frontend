@@ -66,6 +66,10 @@ a.button {
   color: #fff;
 }
 
+a.button-secondary {
+  color: $greyDarkest;
+}
+
 .button-primary {
   @extend .button;
   @include button-color($custom-secondary);
@@ -83,4 +87,3 @@ a.button {
   padding: 0.5em 15px;
   width: 100%;
 }
-
