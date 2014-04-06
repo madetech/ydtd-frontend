@@ -5,6 +5,7 @@
   font-family: $font-family;
   @include font-size($small);
   padding: 15px;
+  display: none;
 
   a {
     border-bottom: 1px solid $greyDarkest;
@@ -16,4 +17,9 @@
       color: $custom-secondary;
     }
   }
+
+  @include respond(desktop) {
+    display: block;
+  }
 }
+ 
