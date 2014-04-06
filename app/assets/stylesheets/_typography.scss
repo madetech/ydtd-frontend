@@ -102,13 +102,13 @@ p {
 // Links
 
 a {
-  color: grey;
+  color: $greyDarkest;
   outline: 0;
   line-height: inherit;
   text-decoration: none;
 
   &:hover {
-    color: grey;
+    color: $greyDarkest;
   }
 
   &.light {
