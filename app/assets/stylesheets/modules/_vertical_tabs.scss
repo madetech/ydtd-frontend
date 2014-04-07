@@ -10,16 +10,25 @@
 }
 
 .vertical-tabs-sidebar-content {
-  padding: $xxxlarge $xxxlarge 0 $xxxlarge;
+  padding: $large $xxxlarge 0 $xxxlarge;
+
+  @include respond(desktop) {
+    padding-top: $xxxlarge;
+  }
 }
 
 .vertical-tabs-sidebar-navigation {
   margin: 0;
-  padding: $xxxlarge 0 0 0;
+  padding: $large 0 0 0;
+
+  @include respond(desktop) {
+    padding: $xxxlarge 0 0 0;
+  }
 
   li {
+    display: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0 1px 0;
   }
 
   a {
@@ -27,17 +36,21 @@
     padding: $large $xxxlarge;
     background: $greyDusk;
     color: $white;
-    margin-bottom: 1px;
 
     &:hover, &:focus {
       background: $greyDarker;
     }
   }
 
-  .vertical-tabs-sidebar-navigation-current a {
-    background: $white;
-    color: $custom-primary;
-    font-weight: bold;
+  .vertical-tabs-sidebar-navigation-current {
+    display: block;
+    padding: 0;
+
+    a {
+      background: $white;
+      color: $custom-primary;
+      font-weight: bold;
+    }
   }
 
   &:first-child {
@@ -50,7 +63,29 @@
   padding: 0 $xxxlarge $xxlarge $xxxlarge;
 }
 
+.vertical-tabs-mobile {
+  li {
+    display: block;
+  }
+
+  .vertical-tabs-sidebar-navigation-current {
+    display: none;
+  }
+}
+
 @include respond(desktop) {
+  .vertical-tabs-mobile {
+    display: none;
+  }
+
+  .vertical-tabs-sidebar-navigation li {
+    display: block;
+
+    &.vertical-tabs-sidebar-navigation-current {
+      padding: 0 0 1px 0;
+    }
+  }
+
   .vertical-tabs-sidebar,
   .vertical-tabs-content {
     float: left;
