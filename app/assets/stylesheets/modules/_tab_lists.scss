@@ -4,8 +4,7 @@
   padding: 20px;
 }
 
-#table-tabs {
-
+.table-tabs {
   a {
     background-color: $grey;
     border: {
@@ -73,8 +72,9 @@
   }
 }
 
-#subscribers-container,
-#updates-list-container {
+.subscribers-container,
+.updates-list-container,
+.table-container {
   table {
     table-layout: fixed;
     text-align: left;
@@ -127,7 +127,7 @@
   }
 }
 
-#updates-list-container {
+.updates-list-container {
   .status {
     @include border-radius(5px);
     color: $white;

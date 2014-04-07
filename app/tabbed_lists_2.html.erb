@@ -3,7 +3,7 @@ title: PJAX Tabs
 body_class: bohek
 ---
 <div id="tabbed-list-container" class="list-container">
-  <div id="table-tabs">
+  <div id="table-tabs" class="table-tabs">
     <a href="tabbed_lists.html">
       <span>Active</span>
       <span class="tab-figure">788</span>
@@ -20,10 +20,11 @@ body_class: bohek
       <span>Deleted</span>
       <span class="tab-figure">0</span>
     </a>
-    <%= partial "modules/search_bar", :locals => {:placeholder => 'Search Lists?'} %>
+    
+    <%#= partial "modules/search_bar", :locals => {:placeholder => 'Search Lists?'} %>
   </div>
 
-  <div id="subscribers-container" data-pjax-container>
+  <div id="subscribers-container" class="subscribers-container" data-pjax-container>
     <table>
       <tr class="table-headers">
         <th class="desktop-only">Email Address</th>
@@ -84,7 +85,7 @@ body_class: bohek
   </div>
 </div>
 
-<div id="updates-list-container" class="list-container">
+<div id="updates-list-container" class="updates-list-container list-container">
   <table>
     <tr class="table-headers">
       <th>Recent Updates</th>
