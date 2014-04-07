@@ -1,5 +1,5 @@
 .profile-badge {
-  text-align: center;
+  overflow: hidden;
 }
 
 .profile-badge-avatar {
@@ -7,27 +7,34 @@
   @include border-radius(50%);
   width: auto;
   height: auto;
-  max-width: 160px;
-  margin: 0 auto;
+  max-height: 60px;
+  float: left;
+}
+
+.profile-badge-details {
+  padding: $xxsmall 0 0 $large;
+  float: left;
 }
 
 .profile-badge-name,
 .profile-badge-role {
   font-size: $large;
   color: $white;
+  padding: 0;
 }
 
 .profile-badge-role {
-  padding: 0;
   font-weight: normal;
 }
 
 @include respond(desktop) {
-  .profile-badge {
-    text-align: left;
+  .profile-badge-avatar {
+    float: none;
+    max-width: 100%;
+    max-height: none;
   }
 
-  .profile-badge-avatar {
-    max-width: 100%;
+  .profile-badge-details {
+    padding: $large 0 0 0;
   }
 }
