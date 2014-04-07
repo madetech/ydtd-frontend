@@ -7,14 +7,15 @@
   }
 
   span.checkbox,
-  span.radio {
+  span.radio,
+  span.boolean {
     @include inline-block;
+    width: 100%;
     position: relative;
     line-height: 18px;
     margin-right: 20px;
 
     label {
-
       &:before {
         @include inline-block;
         
@@ -43,6 +44,10 @@
         content: "";
       }
     }
+
+    @include respond(desktop) {
+      width: auto;
+    }
   }
 
   &.form-field-inline {
@@ -51,14 +56,16 @@
     }
 
     span.checkbox,
-    span.radio {
+    span.radio,
+    span.boolean {
       line-height: 42px;
     }
   }
 
   &.form-field-error {
     span.checkbox,
-    span.radio {
+    span.radio,
+    span.boolean {
       input + label:before {
         @extend %input-error;
       }
@@ -70,7 +77,8 @@
   }
 }
 
-span.checkbox {
+span.checkbox,
+span.boolean {
   label:before {
     @include border-radius($border-radius);
   }
