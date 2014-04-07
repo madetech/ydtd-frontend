@@ -1,6 +1,6 @@
 .flash {
   @extend p;
-  margin-top: $norm;
+  margin: $norm;
   padding: $norm;
   border: 1px solid;
   @include border-radius(3px);
@@ -29,5 +29,12 @@
     border-color: $error;
     color: shade($error, 50);
     background-color: tint($error, 75);
+  }
+}
+
+.modal,
+.list-container {
+  .flash {
+    margin: $norm 0 0 0;
   }
 }
