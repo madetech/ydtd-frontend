@@ -67,8 +67,8 @@
       width: 300px;
     }
 
-    @include respond(300px) {
-      &.input-date {
+    @include respond(all-phones) {
+      &.input-date, &.input-small {
         width: 100%;
       }
     }
