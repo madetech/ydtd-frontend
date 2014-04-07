@@ -16,19 +16,25 @@
     @include box-sizing(border-box);
     color: #000;
     @include inline-block;
-    margin-right: 1px;
+    margin: 0 1px -2px 0;
     padding: 9px 14px;
+    min-width: 100px;
+    text-align: center;
 
     span {
       display: block;
-      @include font-size($norm);
+      @include font-size($small);
+
+      @include respond(desktop) {
+        @include font-size($norm);
+      }
 
       &.tab-figure {
         @include font-size($xxlarge);
       }
     }
 
-    &:hover {
+    &:hover, &:focus {
       background-color: $custom-secondary;
       border-color: $custom-secondary;
       color: $white;
@@ -44,11 +50,6 @@
       }
       color: #000;
       margin-bottom: -1px;
-    }
-
-    @include respond(all-phones) {
-      border-top: 1px solid #000;
-      width: 100%;
     }
   }
 
@@ -79,51 +80,63 @@
     table-layout: fixed;
     text-align: left;
     width: 100%;
+  }
 
-    th,
-    td {
-      @include font-size($small);
-      font-weight: $font-weight-regular;
-      padding: 9px 14px;
+  .table-empty-row, tr {
+    border-bottom: 1px solid $grey;
+  }
+
+  th,
+  td,
+  .table-empty-row {
+    @include font-size($small);
+    font-weight: $font-weight-regular;
+    padding: 9px 14px;
+  }
+
+  .table-empty-row {
+    text-align: center;
+    font-style: italic;
+  }
+
+  a {
+    color: $custom-primary;
+    font-weight: bold;
+    text-decoration: underline;
+
+    &:hover, &:focus {
+      color: $custom-secondary;
+    }
+  }
+
+  .subscribed-column {
+    width: 200px;
+
+    &:after {
+      color: $custom-secondary;
+      content: "\e600";
+      @include inline-block;
+      font-family: 'icomoon';
+      margin-left: 5px;
+      @include rotate(180deg);
     }
 
-    th {
-      cursor: pointer;
-    }
-
-    .subscribed-column {
-      width: 200px;
+    @include respond(all-phones) {
+      width: auto;
 
       &:after {
-        color: $custom-secondary;
-        content: "\e600";
-        @include inline-block;
-        font-family: 'icomoon';
-        margin-left: 5px;
-        @include rotate(180deg);
-      }
-
-      @include respond(all-phones) {
-        width: auto;
-
-        &:after {
-          display: none;
-        }
+        display: none;
       }
     }
+  }
 
-    .checkbox-column {
-      width: 46px;
-    }
+  .checkbox-column {
+    width: 46px;
+  }
 
-    .table-headers {
-      background-color: $white;
-      border: 1px solid $grey;
-    }
-
-    tr {
-      border-bottom: 1px solid $grey;
-    }
+  .table-headers {
+    background-color: $white;
+    border: 1px solid $grey;
   }
 }
 
