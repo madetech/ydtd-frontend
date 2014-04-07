@@ -13,7 +13,7 @@ button {
 
   &:hover,
   &:focus {
-    @include background(linear-gradient(lighten($color, 12%) 62%, $color));
+    @include background(linear-gradient(lighten($color, 12%) 38%, $color));
   }
 
   &:active {
