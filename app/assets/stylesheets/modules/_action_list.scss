@@ -8,6 +8,7 @@
     border-bottom: 1px solid #ccc;
     padding: 11px $norm;
     color: #333;
+    @include font-size($small);
   }
 
   a {
@@ -22,6 +23,7 @@
   }
 
   .action-list--title {
+    @include font-size($norm);
     margin-top: $norm;
     border: 1px solid #999;
     background: #fff;
