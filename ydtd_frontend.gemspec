@@ -11,15 +11,15 @@ Gem::Specification.new do |s|
   s.summary     = "Frontend component for the YDTD application and marketing site."
   s.description = ""
 
-  s.add_dependency "middleman", "3.2.2"
-  s.add_dependency "middleman-livereload", "3.1.0"
-  s.add_dependency "middleman-minify-html", "3.1.1"
-  s.add_dependency "sass", "3.2.17"
-  s.add_dependency "compass", "0.12.4"
-  s.add_dependency "modular-scale", "2.0.4"
-  s.add_dependency "oj", "2.2.3"
-  s.add_dependency "therubyracer", "0.12.0"
-  s.add_dependency "rails", "3.2.17"
+  s.add_development_dependency "middleman", "3.2.2"
+  s.add_development_dependency "middleman-livereload", "3.1.0"
+  s.add_development_dependency "middleman-minify-html", "3.1.1"
+  s.add_development_dependency "sass", "3.2.17"
+  s.add_development_dependency "compass", "0.12.4"
+  s.add_development_dependency "modular-scale", "2.0.4"
+  s.add_development_dependency "oj", "2.2.3"
+  s.add_development_dependency "therubyracer", "0.12.0"
+  s.add_development_dependency "rails", "3.2.17"
 
   s.require_paths = ["lib", "app", "vendor"]
   s.files = Dir["{lib,app,vendor}/**/*"] + ["README.md"]
