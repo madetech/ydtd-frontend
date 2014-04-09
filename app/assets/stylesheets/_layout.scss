@@ -11,10 +11,16 @@
   }
 }
 
-  @include respond(all-phones) {
+@include respond(all-phones) {
+  .application--content {
     min-width: 0;
     padding: 0;
     width: 100%;
+  }
+
+  .application--flash-container {
+    padding-left: $norm;
+    padding-right: $norm;
   }
 }
 
