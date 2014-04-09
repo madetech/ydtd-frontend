@@ -47,7 +47,7 @@
     <%= javascript_include_tag "modernizr", "plugins", "all" %>
   </head>
 
-  <body class="<%= "#{page_classes} #{current_page.data.body_class}" %>" itemscope itemtype="http://schema.org/<%= current_page.data.schema || 'WebPage' %>">
+  <body class="<%= "#{current_page.data.body_class}" %>" itemscope itemtype="http://schema.org/<%= current_page.data.schema || 'WebPage' %>">
     <%= yield %>
   </body>
 </html>
