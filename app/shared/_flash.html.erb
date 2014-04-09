@@ -1,0 +1,11 @@
+<% unless flash.empty? %>
+  <div class="application--flash">
+    <% [:notice, :error, :alert, :success].each do |level| %>
+      <% unless flash[level].blank? %>
+        <div class="<%= flash_class(level) %>">
+          <%= flash[level].html_safe %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

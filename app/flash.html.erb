@@ -2,18 +2,15 @@
 title: Form inputs
 ---
 
-<form class="list-container">
-  <h1>Flash messages</h1>
+<%= partial 'views/shared/flash',
+            :locals => {:flash => {:notice => 'Some information for you. <form><button>Do something</button>',
+                                   :success => 'Your form submitted successfully!',
+                                   :error => 'There are a few errors for you to address.'}} %>
 
-  <div class="flash flash-info">
-    <p>Some information for you.</p>
-  </div>
-
-  <div class="flash flash-success">
-    <p>Your form submitted successfully!</p>
-  </div>
-
-  <div class="flash flash-error">
-    <p>There are a few errors for you to address.</p>
-  </div>
-</form>
+<div class="application--content">
+  <form class="modal list-container">
+    <div class="flash flash-info">
+      <p>Some information for you.</p>
+    </div>
+  </form>
+</div>
