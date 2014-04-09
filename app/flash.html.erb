@@ -3,7 +3,7 @@ title: Form inputs
 ---
 
 <%= partial 'views/shared/flash',
-            :locals => {:flash => {:notice => 'Some information for you. <form><button>Do something</button>',
+            :locals => {:flash => {:notice => 'Some information for you. <form><input type="submit" class="button" value="Do something" /> <a href="#" class="button">Go somewhere</a></form>',
                                    :success => 'Your form submitted successfully!',
                                    :error => 'There are a few errors for you to address.'}} %>
 

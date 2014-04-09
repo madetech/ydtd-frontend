@@ -2,16 +2,17 @@
   @extend p;
   margin: $norm 0 0 0;
   padding: $norm;
-
+  overflow: hidden;
   border: 1px solid;
   @include border-radius(3px);
 
   form {
     float: right;
+    margin: ($norm * -1) 0;
   }
 
-  input.button, a.button {
-    margin: -4px 0 0 0;
+  button, input.button, a.button {
+    margin: ($norm - 4px) 0;
   }
 
   p {
