@@ -1,7 +1,14 @@
 // application layout
 
-.application--content {
+.application--content,
+.application--breadcrumbs,
+.application--flash {
   @include row();
+  margin-top: $norm;
+
+  :first-child {
+    margin-top: 0;
+  }
 
   @include respond(all-phones) {
     min-width: 0;

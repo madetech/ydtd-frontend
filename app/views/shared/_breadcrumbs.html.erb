@@ -1,0 +1,8 @@
+<% unless breadcrumbs.empty? %>
+  <div class="application--breadcrumbs">
+    <% breadcrumbs.each_with_index do |breadcrumb, i| %>
+      <%= link_to_unless_current(breadcrumb[:title], breadcrumb[:path]) %>
+      <% unless (i + 1) == breadcrumbs.count %>/<% end %>
+    <% end %>
+  </div>
+<% end %>

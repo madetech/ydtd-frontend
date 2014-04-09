@@ -1,6 +1,10 @@
 <% wrap_layout :layout do %>
   <%= partial "shared/header", :locals => {:active => current_page.data.active} %>
 
+  <% breadcrumbs({:path => '#', :title => 'People'},
+                 {:path => '#', :title => 'Emile Swartz'}) %>
+  <%= partial "views/shared/breadcrumbs", :breadcrumbs => breadcrumbs %>
+
   <main class="application--content">
     <%= yield %>
   </main>

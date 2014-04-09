@@ -7,16 +7,22 @@ require 'middleman-minify-html'
 
 require 'app/helpers/ydtd_frontend/mailer_helper'
 require 'app/helpers/ydtd_frontend/colors_helper'
+require 'app/helpers/ydtd_frontend/breadcrumbs_helper'
 
-module DefaultLogoHelper
+module MockHelper
   def logo_url
     'http://placehold.it/170x62/00cdff/ffffff/'
+  end
+
+  def link_to_unless_current(*args)
+    link_to(*args)
   end
 end
 
 helpers YdtdFrontend::MailerHelper
 helpers YdtdFrontend::ColorsHelper
-helpers DefaultLogoHelper
+helpers YdtdFrontend::BreadcrumbsHelper
+helpers MockHelper
 
 set :source, "app"
 set :css_dir, "assets/stylesheets"
