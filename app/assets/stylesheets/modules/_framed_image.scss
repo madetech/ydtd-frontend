@@ -1,0 +1,5 @@
+%framed-image {
+  display: block;
+  border: 3px solid $white;
+  @include box-shadow(0 3px 3px rgba(darken($custom-secondary, 30%), 0.2));
+}

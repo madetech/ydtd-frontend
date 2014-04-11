@@ -3,7 +3,7 @@
 }
 
 .profile-badge-avatar {
-  @extend .user--avatar;
+  @extend %framed-image;
   @include border-radius(50%);
   width: auto;
   height: auto;
