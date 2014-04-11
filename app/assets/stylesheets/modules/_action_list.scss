@@ -2,6 +2,12 @@
   margin: 0;
   padding: $norm 0 0 0;
 
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .action-list--title,
   li {
     overflow: hidden;
     line-height: 28px;
