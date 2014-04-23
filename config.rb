@@ -19,6 +19,18 @@ module MockHelper
   def link_to_unless_current(*args)
     link_to(*args)
   end
+
+  class Flash
+    def empty?; true; end
+  end
+
+  def flash
+    Flash.new
+  end
+
+  def tracking
+    {}
+  end
 end
 
 class String
@@ -34,11 +46,15 @@ helpers YdtdFrontend::BreadcrumbsHelper
 helpers YdtdFrontend::FlashHelper
 helpers MockHelper
 
+breadcrumbs({:path => '#', :title => 'People'},
+            {:path => '#', :title => 'Emile Swartz'})
+
 set :source, "app"
 set :css_dir, "assets/stylesheets"
 set :js_dir, "assets/javascripts"
 set :images_dir, "assets/images"
 set :fonts_dir, "assets/fonts"
+set :partials_dir, 'views'
 set :layouts_dir, 'views/layouts'
 set :layout_dir, 'views/layouts'
 

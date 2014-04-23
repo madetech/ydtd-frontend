@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <%= partial 'shared/head', :locals => { :type => "application" } %>
+  <body
+    class="<%= @current_controller %>"
+    itemscope
+    itemtype="http://schema.org/WebPage"
+    >
+    <div class="wrapper">
+      <%= partial 'shared/header' %>
+      <%= partial 'shared/flash', :flash => flash %>
+      <%= partial 'shared/breadcrumbs', :breadcrumbs => breadcrumbs %>
+      
+      <main class="application--content">
+        <%= content_for?(:content) ? yield_content(:content) : yield %>
+      </main>
+
+      <div class="sticky"></div>
+    </div>
+
+    <%= partial 'shared/footer' %>
+
+    <%= partial 'shared/analytics' %>
+  </body>
+</html>
