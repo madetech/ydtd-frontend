@@ -5,6 +5,7 @@ require 'modular-scale'
 require 'middleman-livereload'
 require 'middleman-minify-html'
 
+require 'app/helpers/ydtd_frontend/view_helper'
 require 'app/helpers/ydtd_frontend/mailer_helper'
 require 'app/helpers/ydtd_frontend/colors_helper'
 require 'app/helpers/ydtd_frontend/breadcrumbs_helper'
@@ -26,6 +27,7 @@ class String
   end
 end
 
+helpers YdtdFrontend::ViewHelper
 helpers YdtdFrontend::MailerHelper
 helpers YdtdFrontend::ColorsHelper
 helpers YdtdFrontend::BreadcrumbsHelper

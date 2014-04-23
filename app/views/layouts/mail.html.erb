@@ -92,11 +92,7 @@
                             <tr>
                               <td>
                                 <div style="color: #111111; font-family: 'Gotham SSm A', 'Gotham SSm B', 'Helvetica', Helvetica, Arial, sans-serif; line-height: 1.5; font-size: 24px; font-weight: bold;">
-                                  <% if defined?(Middleman) %>
-                                    <%= yield_content :strapline %>
-                                  <% else %>
-                                    <%= yield :strapline %>
-                                  <% end %>
+                                  <%= yield_content :strapline %>
                                 </div>
                               </td>
                             </tr>
