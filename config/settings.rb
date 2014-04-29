@@ -1,3 +1,5 @@
+require 'lib/middleman/extensions/pages_directory'
+
 set :source, 'app'
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'

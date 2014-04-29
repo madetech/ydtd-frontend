@@ -12,8 +12,6 @@ require 'modular-scale'
 require 'middleman-livereload'
 require 'middleman-minify-html'
 
-require 'lib/middleman/extensions/pages_directory'
-
 [:settings, :build, :helpers, :pages].each do |f|
   file = "config/#{f}.rb"
   instance_eval(File.read(file), file, 1)
