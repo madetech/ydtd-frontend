@@ -2,7 +2,7 @@ module YdtdFrontend
   module MailerHelper
     def spacer(width, height)
       image_tag('email/spacer.gif',
-                :alt => " ",
+                :alt => ' ',
                 :height => width,
                 :width => height,
                 :style => "display:block;")

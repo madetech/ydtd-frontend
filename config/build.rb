@@ -12,6 +12,6 @@ end
 after_configuration do
   sprockets.append_path "#{root}/vendor/assets/javascripts"
   sprockets.append_path "#{root}/vendor/assets/stylesheets"
-  sprockets.import_asset "modernizr.js"
-  sprockets.import_asset "jquery.min.js"
+  sprockets.import_asset 'modernizr.js'
+  sprockets.import_asset 'jquery.min.js'
 end
