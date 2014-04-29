@@ -11,7 +11,7 @@ within your application's `Gemfile` you will need to add the following:
 
 ```
 gem 'ydtd_frontend', :git => 'https://github.com/madebymade/ydtd-frontend.git',
-                     :ref => 'v0.0.8'
+                     :tag => 'v0.0.9'
 ```
 
 All the files within `app`, `lib` and `vendor` will now be included in your 
