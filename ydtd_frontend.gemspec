@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = YdtdFrontend::VERSION
   s.authors     = ['Rory MacDonald', 'Seb Ashton', 'Scott Mason', 'Luke Morton']
   s.email       = ['rory@madebymade.co.uk']
-  s.homepage    = 'http://www.madebymade.co.uk'
+  s.homepage    = 'https://www.madetech.co.uk/'
   s.summary     = 'Frontend component for the YDTD application and marketing site.'
   s.description = ''
 
