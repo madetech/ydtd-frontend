@@ -6,8 +6,8 @@ Created using middleman, imported into Rails as a gem.
 
 ## Integrating with a rails app
 
-`YdtdFrontend::Engine` isn't currently hosted on ruby gems yet so to include
-within your application's `Gemfile` you will need to add the following:
+`YdtdFrontend::Engine` isn't currently hosted on rubygems. To install using
+bundler you can include the git repository in your `Gemfile`:
 
 ```
 gem 'ydtd_frontend', :git => 'https://github.com/madebymade/ydtd-frontend.git',
