@@ -4,7 +4,23 @@ Frontend components for [YDTD](http://www.yourdaytheirday.com). A mixture of
 Coffeescript, SASS and HTML partials which are used within the main application.
 Created using middleman, imported into Rails as a gem.
 
-## Running
+## Integrating with a rails app
+
+`YdtdFrontend::Engine` isn't currently hosted on ruby gems yet so to include
+within your application's `Gemfile` you will need to add the following:
+
+```
+gem 'ydtd_frontend', :git => 'https://github.com/madebymade/ydtd-frontend.git',
+                     :ref => 'v0.0.8'
+```
+
+All the files within `app`, `lib` and `vendor` will now be included in your 
+rails application.
+
+## Developing
+
+To view the styleguide or to develop new styles you can run the middleman app.
+Run the following to boot it:
 
 ``` sh
 bundle exec middleman -p 5000
