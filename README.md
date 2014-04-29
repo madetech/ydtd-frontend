@@ -21,6 +21,7 @@ Developed and maintained by [Made][made]. Key contributions:
  * [Rory MacDonald](https://github.com/RoryMacDonald)
  * [Seb Ashton](https://github.com/SebAshton)
  * [Scott Mason](https://github.com/sowasred2012)
+ * [Luke Morton](https://github.com/DrPheltRight)
 
 ## License
 
