@@ -2,10 +2,19 @@
 title: Form inputs
 ---
 
-<%= partial 'views/shared/flash',
-            :locals => {:flash => {:notice => 'Some information for you. <form><input type="submit" class="button" value="Do something" /> <a href="#" class="button">Go somewhere</a></form>',
-                                   :success => 'Your form submitted successfully!',
-                                   :error => 'There are a few errors for you to address.'}} %>
+<% notice = capture do %>
+  Some information for you.
+  <form>
+    <input type="submit" class="button" value="Do something" />
+    <a href="#" class="button">Go somewhere</a>
+  </form>
+<% end %>
+
+<% flash = {:notice => notice,
+            :success => 'Your form submitted successfully!',
+            :error => 'There are a few errors for you to address.'} %>
+
+<%= partial 'views/shared/flash', :locals => {:flash => flash} %>
 
 <div class="application--content">
   <form class="modal list-container">
