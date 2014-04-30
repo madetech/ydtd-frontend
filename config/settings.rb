@@ -8,9 +8,8 @@ set :fonts_dir, 'assets/fonts'
 set :partials_dir, 'views'
 set :layouts_dir, 'views/layouts'
 set :layout_dir, 'views/layouts'
-set :pages_dir, '../styleguide'
 set :layout, 'application'
 
 activate :livereload
 activate :i18n, :path => 'config/locales'
-activate :pages_directory
+activate :pages_directory, :pages_dir => '../styleguide'
