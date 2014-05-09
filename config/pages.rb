@@ -8,3 +8,4 @@ page '/profile.html', :layout => :application
 page '/email.html', :layout => :mail
 page '/marketing/'
 page '/login.html', :layout => :auth
+page '/reset-password.html', :layout => :auth
