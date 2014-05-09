@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = 'Frontend component for the YDTD application and marketing site.'
   s.description = ''
 
-  s.add_dependency 'rails', '3.2.17'
+  s.add_dependency 'rails', '>= 3.2'
 
   s.require_paths = ['lib', 'app', 'vendor']
   s.files = Dir['{lib,app,vendor}/**/*'] + ['README.md', 'LICENSE']
