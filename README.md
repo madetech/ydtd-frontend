@@ -11,7 +11,7 @@ bundler you can include the git repository in your `Gemfile`:
 
 ```
 gem 'ydtd_frontend', :git => 'https://github.com/madebymade/ydtd-frontend.git',
-                     :tag => 'v0.0.9'
+                     :tag => 'v0.0.10'
 ```
 
 All the files within `app`, `lib` and `vendor` will now be included in your 
