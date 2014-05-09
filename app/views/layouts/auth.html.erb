@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+  <%= partial 'shared/head' %>
+  <body class="bohek" itemscope itemtype="http://schema.org/WebPage">
+    <div class="row">
+      <div class="login-modal-container">
+        <div class="ydtd-logo-group">
+          <%= partial 'shared/logo-white' %>
+        </div>
+
+        <section id="<%= content_for :id %>" class="modal-w-header">
+          <header class="modal--header">
+            <h1 class="larger">
+              <%= yield_content(:title) %>
+            </h1>
+          </header>
+
+          <div class="modal--content">
+            <%= yield %>
+          </div>
+        </section>
+
+        <%= yield_content(:links) %>
+      </div>
+    </div>
+
+    <footer class="footer--minimal">
+      <small class="copyright">
+        Powered by <span itemprop='copyrightHolder' itemscope itemtype='http://schema.org/Organization'><a itemprop='url' href="http://www.madebymade.co.uk"><span itemprop='name'>Made Tech</span></a></span>. <span itemprop='copyrightYear'>2014</span>. All rights reserved.<br>The YDTD logo and name are trademarks of <a itemprop='url' href="http://www.madebymade.co.uk"><span itemprop='name'>Made Tech Ltd</span></a>.
+      </small>
+    </footer>
+
+    <%= partial 'shared/analytics' %>
+  </body>
+</html>

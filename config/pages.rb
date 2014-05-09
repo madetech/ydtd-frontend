@@ -7,3 +7,4 @@ page '/tabbed_lists_2.html', :layout => :application
 page '/profile.html', :layout => :application
 page '/email.html', :layout => :mail
 page '/marketing/'
+page '/login.html', :layout => :auth
