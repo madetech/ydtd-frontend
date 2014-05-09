@@ -9,7 +9,7 @@ Created using middleman, imported into Rails as a gem.
 `YdtdFrontend::Engine` isn't currently hosted on rubygems. To install using
 bundler you can include the git repository in your `Gemfile`:
 
-```
+``` ruby
 gem 'ydtd_frontend', :git => 'https://github.com/madebymade/ydtd-frontend.git',
                      :tag => 'v0.0.10'
 ```
