@@ -14,7 +14,7 @@ gem 'ydtd_frontend', :git => 'https://github.com/madebymade/ydtd-frontend.git',
                      :tag => 'v0.0.11'
 ```
 
-All the files within `app`, `lib` and `vendor` will now be included in your 
+All the files within `app`, `lib` and `vendor` will now be included in your
 rails application.
 
 ## Developing
@@ -36,6 +36,7 @@ Developed and maintained by [Made][made]. Key contributions:
  * [Seb Ashton](https://github.com/SebAshton)
  * [Scott Mason](https://github.com/sowasred2012)
  * [Luke Morton](https://github.com/DrPheltRight)
+ * [Chris Blackburn](https://github.com/chrisblackburn)
 
 ## License
 
