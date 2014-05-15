@@ -111,7 +111,9 @@
 
   .subscribed-column {
     width: 200px;
+  }
 
+  .is-sorted.down {
     &:after {
       color: $custom-secondary;
       content: "\e600";
