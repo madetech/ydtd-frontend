@@ -34,7 +34,11 @@ window.DatePickerView = class DatePickerView extends Uniform
       $selects = $field.find('select')
       $input.insertAfter($selects.last())
       $input.val($selects.map(-> pad_date(@value)).get().reverse().join('/'))
-      $input.datepicker(format: 'dd/mm/yyyy')
+      
+      $input.datepicker
+        format: 'dd/mm/yyyy'
+        orientation: 'left'
+
       $input.siblings('label').attr('for', $input.attr('id'))
 
   update_select_values: (el) ->
