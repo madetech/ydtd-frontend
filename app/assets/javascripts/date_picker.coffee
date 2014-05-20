@@ -7,7 +7,6 @@ window.DatePickerView = class DatePickerView extends Uniform
   events: (add) ->
     add('.input-date', 'changeDate', (el, e) -> @update_select_values(el))
     add('.input-date', 'keyup', (el, e) -> @update_select_values(el))
-    add('.input-date', 'click', (el) -> $(el).datepicker('place'))
 
   init: ->
     super
