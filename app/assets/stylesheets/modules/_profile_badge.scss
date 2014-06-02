@@ -2,6 +2,10 @@
   overflow: hidden;
 }
 
+.profile-badge-large {
+  @extend .profile-badge;
+}
+
 .profile-badge-avatar {
   @extend %framed-image;
   @include border-radius(50%);
@@ -28,13 +32,15 @@
 }
 
 @include respond(desktop) {
-  .profile-badge-avatar {
-    float: none;
-    max-width: 100%;
-    max-height: none;
-  }
+  .profile-badge-large {
+    .profile-badge-avatar {
+      float: none;
+      max-width: 100%;
+      max-height: none;
+    }
 
-  .profile-badge-details {
-    padding: $large 0 0 0;
+    .profile-badge-details {
+      padding: $large 0 0 0;
+    }
   }
 }
